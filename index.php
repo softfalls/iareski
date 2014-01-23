@@ -114,6 +114,8 @@
 </div>
 <!-- End of Splash Screen -->
 
+
+
 <!-- Homepage Slider -->
 <div id="home-slider">	
     <div class="overlay"></div>
@@ -134,10 +136,12 @@
 </div>
 <!-- End Homepage Slider -->
 
+<div id="cab" style="height: 30%; background: white; margin-left: -20px; margin-right: -20px;"></div>
+
 <!-- Header -->
 <header>
     <div class="sticky-nav">
-    	<!--<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>-->
+    	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
         	<a id="goUp" href="#home-slider" title="IARESKI IMÓVEIS">IARESKI</a>
@@ -146,9 +150,7 @@
         <nav id="menu">
         	<ul id="menu-nav">
             	<li class="current"><a href="#home-slider">Home</a></li>
-                <li><a href="#work">Imóveis</a></li>                
-                <li><a href="#about">Sobre</a></li>
-                <li><a href="#parceiros">Parceiros</a></li>
+                <li><a href="#work">Imóveis</a></li>                               
                 <li><a href="#contact">Contato</a></li>
                 <!--<li><a href="shortcodes.html" class="external">Shortcodes</a></li>-->
             </ul>
