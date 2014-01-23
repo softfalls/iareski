@@ -114,10 +114,12 @@
 </div>
 <!-- End of Splash Screen -->
 
-<div id="cab" style="height: 18%; background: white; margin-left: 0px; margin-right: -20px;">
+<div id="cab" style="height: 10%; background: white; margin-left: 0px; margin-right: -20px;">
     <img title="iareski" src="imagens/logooficialempresa.png" alt="iareski_logo" style="width: 300px; margin-left:100px">
-    <img  order="0"  alt="EDMILSON IARESKI (45) 3574-7043"  style="width: 500px; margin-left:200px; margin-top: -10px">
+    <div style="margin-top: -65px; color: #535959; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #DFDFDF; width: 250px; margin-left:800px"> 
+            <p> EDMILSON IARESKI (45) 3574-7043 </p>
     </div>
+</div>
 
 <!-- Homepage Slider -->
 <div id="home-slider">	

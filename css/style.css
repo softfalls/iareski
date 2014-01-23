@@ -5,7 +5,13 @@ Author : maison
 Description:
 Purpose of the stylesheet follows.
 */
-/*@import "jquery.fancybox-1.3.4.css";*/
+texto_cab {
+    width: 500px; margin-left:200px; margin-top: -10px; 
+    color: #535959;
+    font: 900 20px 'Roboto',sans-serif; 
+    text-shadow: 0 2px 0 #DFDFDF;}/*@import "jquery.fancybox-1.3.4.css";*/
+
+
 body {
 background: url("../img/bg.png") repeat scroll 0 0 #E1E1E1;
 color: #75787B;
@@ -5298,3 +5304,4 @@ padding: 10px 15px;
             .fontCinzaClaro {color:#7F8289;}
             .cinzaTitulo {background-color:#26292E;}
             .fontBranco {color:white;}
+
