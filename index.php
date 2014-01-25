@@ -230,24 +230,26 @@
 <!-- descricao Section -->
 <div id="descricao" class="page-alternate" title="">
     <div id="descFotoPrincipal"></div>
-    <ul id="descEspecificacao" style="width: 190px; margin-left:480px; margin-top:-370px;">
+    <div id="map" style="float: right;"> </div>
+    <ul id="descEspecificacao" style="width: 550px; margin-left:480px; margin-top:-370px;">
         <li id="descCodigo">Código </li>                        
         <li id="descVendaLoc">Imóvel para </li>                        
-        <li id="descTipo">Tipo de imóvel </li>                        
+        <li id="descTipo">Tipo de imóvel </li>
+        <li id="descAreaTerreno">Área do terreno </li>                        
+        <li id="descAreaConst">Área construída </li>    
         <li id="descQuarto">Qtd Quarto </li>
         <li id="descSuite">Qtd Suíte </li>
         <li id="descSala">Qtd Sala </li>
         <li id="descCozinha">Qtd Cozinha </li>
-        <li id="descEndereco">Endereço </li>                        
-        <li id="descBairro">Bairro </li>                        
-        <li id="descCidade">Cidade </li>                        
         <li id="descEstado">Estado </li>                        
-        <li id="descAreaTerreno">Área do terreno </li>                        
-        <li id="descAreaConst">Área construída </li>                        
-        <li id="descValor">Valor do imóvel </li>                                                                      
+        <li id="descCidade">Cidade </li>    
+        <li id="descBairro">Bairro </li>                        
+        <li id="descEndereco">Endereço </li>                        
+        <li id="descValor">Valor do imóvel </li>
     </ul>  
-    <div id="descDescricao" style="width: 1100px; margin-left:0px; margin-top:60px;"></div>
-    <div id="map" style="margin-left:680px; margin-top:-502px;"> </div>
+    <div id="descDescricao" style="width: 1100px; margin-left:0px; margin-top:140px;"></div>
+    <!--    //<div id="map" style="margin-left:680px; margin-top:-503px;"> </div>-->
+    <!--<div id="map" style="float: right;"> </div>-->
     
 </div>
 <!-- End descricao Section -->
