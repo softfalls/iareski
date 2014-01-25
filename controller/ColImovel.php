@@ -10,7 +10,12 @@ Class ColImovel{
     public function __construct(){}
     
     function getImovelAtivo(){
-        $query = "select * from imo_imovel where ativo=1";
+        $query = "select 
+            i.*,
+            (select b.nome from imo_bairro b where b.idbairro=i.idbairro limit 1) as 'bairro',
+            (select c.nome from imo_cidade c  where c.idcidade=i.idcidade limit 1 ) as 'cidade'
+            from imo_imovel i where i.ativo=1";
+        
         $result = mysql_query($query);
         while($obj = mysql_fetch_object($result)){
             $array[] = $obj;

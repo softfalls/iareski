@@ -33,13 +33,22 @@ index.carregarFotos=function(){
             //$('<a>').addClass('hover-wrap fancybox').attr('data-fancybox-group','gallery').attr('title',obj.nome).attr('href',path+'grandes/'+foto.arquivo);
         a.append("<span class='overlay-img'></span><span class='overlay-img-thumb font-icon-plus'></span>");
         //obj.descricao = obj.descricao+"<br/><a href='javascript:index.descricao("+obj.idimovel+")'>[+]Mais Informações</a>";
-        //var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).attr('alt',obj.descricao);
+        //var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).attr('alt',obj.descricao);        
         var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).prop('codigo',obj.idimovel);
         img.click(function(){ var c = $(this).prop('codigo'); index.descricao(c); });
-        li.append(a).append(img);
+              
+        var nome = "<br>"+obj.nome;
+        var cidade = index.getContrato(obj)+" - "+obj.cidade;
+        li.append(cidade+nome).append(a).append(img);
         foto===null? '' : $('#thumbs').append(li);
     }    
     index.getCodigo();
+};
+
+index.getContrato=function(obj){    
+    if(obj.venda == '1' && obj.locacao == '1'){ return "Venda & Locação"; }
+    else if(obj.venda == '1'){ return "Venda"; }
+    else{ return "locação"; }
 };
 
 index.descricao=function(idimovel){
@@ -61,21 +70,25 @@ index.getClassImovel=function(obj){
     if(obj.idtipo=='1' || obj.idtipo=='9' || obj.idtipo=='10' || obj.idtipo=='11'){ 
         retorno = obj.venda=='1' ? 'item-thumbs span3 venda vcasa' : retorno;
         retorno = obj.locacao=='1' ? 'item-thumbs span3 locacao lcasa' : retorno;
+        retorno = obj.locacao=='1' && obj.venda=='1' ? 'item-thumbs span3 venda vcasa locacao lcasa' : retorno;
         if(obj.venda=='0' && obj.locacao=='0'){retorno='item-thumbs span3 venda vcasa'}
     }
     if(obj.idtipo=='2' || obj.idtipo=='15'){ 
         retorno = obj.venda=='1' ? 'item-thumbs span3 venda vapartamento' : retorno;
         retorno = obj.locacao=='1' ? 'item-thumbs span3 locacao lapartamento' : retorno;
+        retorno = obj.locacao=='1' && obj.venda=='1' ? 'item-thumbs span3 venda vapartamento locacao lapartamento' : retorno;
         if(obj.venda=='0' && obj.locacao=='0'){retorno='item-thumbs span3 venda vapartamento'}
     }
     if(obj.idtipo=='3' || obj.idtipo=='4' || obj.idtipo=='6' || obj.idtipo=='8' || obj.idtipo=='12' || obj.idtipo=='16'){ 
         retorno = obj.venda=='1' ? 'item-thumbs span3 venda vcomercial' : retorno;
         retorno = obj.locacao=='1' ? 'item-thumbs span3 locacao lcomercial' : retorno;
+        retorno = obj.locacao=='1' && obj.venda=='1' ? 'item-thumbs span3 venda vcomercial locacao lcomercial' : retorno;
         if(obj.venda=='0' && obj.locacao=='0'){retorno='item-thumbs span3 venda vcomercial'}
     }
     if(obj.idtipo=='5' || obj.idtipo=='7' || obj.idtipo=='13' || obj.idtipo=='14'){ 
         retorno = obj.venda=='1' ? 'item-thumbs span3 venda vterreno' : retorno;
         retorno = obj.locacao=='1' ? 'item-thumbs span3 locacao lterreno' : retorno;
+        retorno = obj.locacao=='1' && obj.venda=='1' ? 'item-thumbs span3 venda vterreno locacao lterreno' : retorno;
         if(obj.venda=='0' && obj.locacao=='0'){retorno='item-thumbs span3 venda vterreno'}
     }
     
