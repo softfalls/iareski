@@ -27,11 +27,15 @@ index.carregarFotos=function(){
         var classe = index.getClassImovel(obj);
         var foto = index.getFoto(obj.idimovel,array.fotos);
         var li = $('<li>').addClass(classe).attr('idimovel',obj.idimovel);
-        var a = foto===null? $('<a>') :     
-            $('<a>').addClass('hover-wrap fancybox').attr('data-fancybox-group','gallery').attr('title',obj.nome).attr('href',path+'grandes/'+foto.arquivo);
+        var a = foto===null? $('<a>') :  
+            $('<a>').addClass('hover-wrap fancybox').attr('data-fancybox-group','gallery').attr('title',obj.nome).attr('href','javascript:index.descricao('+obj.idimovel+')');
+            // linha abaixo comentada pois nao será aberto a galeria de imagens e sim a tela de descrição diretamente
+            //$('<a>').addClass('hover-wrap fancybox').attr('data-fancybox-group','gallery').attr('title',obj.nome).attr('href',path+'grandes/'+foto.arquivo);
         a.append("<span class='overlay-img'></span><span class='overlay-img-thumb font-icon-plus'></span>");
-        obj.descricao = obj.descricao+"<br/><a href='javascript:index.descricao("+obj.idimovel+")'>[+]Mais Informações</a>";
-        var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).attr('alt',obj.descricao);
+        //obj.descricao = obj.descricao+"<br/><a href='javascript:index.descricao("+obj.idimovel+")'>[+]Mais Informações</a>";
+        //var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).attr('alt',obj.descricao);
+        var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).prop('codigo',obj.idimovel);
+        img.click(function(){ var c = $(this).prop('codigo'); index.descricao(c); });
         li.append(a).append(img);
         foto===null? '' : $('#thumbs').append(li);
     }    
