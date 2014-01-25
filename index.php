@@ -98,6 +98,7 @@
     .fancybox-opened .fancybox-title { height: 220px; overflow: auto; }
     .fancybox-opened .fancybox-title p { text-align: justify; }
     #descricao{display: none;}
+    #logo{ left: 25px; position: relative; top: 10px; width: 300px; }
 </style>
 </head>
 
@@ -114,8 +115,8 @@
 </div>
 <!-- End of Splash Screen -->
 
-<div id="cab" style="height: 18%; background: white; margin-left: 0px; margin-right: -20px;"> <!--#7F8289-->
-    <img title="iareski" src="imagens/logooficialempresa.png" alt="iareski_logo" style="width: 300px; margin-left:100px">
+<div id="cab" style="height: 18%; background: white; min-height: 100px;"> <!--#7F8289-->
+    <img id="logo" title="iareski" src="imagens/logooficialempresa.png" alt="iareski_logo">
     <div style="margin-top: -65px; color: #483D8B; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #C0C0C0; width: 200px; margin-left:800px"> 
             <p> IARESKI IMÓVEIS (45) 3574-7043 </p>
     </div>

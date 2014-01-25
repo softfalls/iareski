@@ -15,6 +15,7 @@ BRUSHED.mobileNav = function(){
 			mobileMenuClone.insertAfter('#menu');
 			$('#navigation-mobile #menu-nav').attr('id', 'menu-nav-mobile');
 		}
+                $('#cab').css('margin-left', '-20px').css('margin-right','-20px');
 	} else {
 		$('#navigation-mobile').css('display', 'none');
 		if ($('#mobile-nav').hasClass('open')) {

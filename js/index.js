@@ -10,6 +10,7 @@ index.start=function(){
     index.carregarFotos();   
     $(document).bind("contextmenu",function(e){ alert("Direitos reservados"); return false; });
     //$('#home-slider').css('height','70%'); // ALTERE AQUI E NA DIV COM ID='CAB'
+    
 };
 
 index.getCodigo=function(){
