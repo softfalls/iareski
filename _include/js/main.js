@@ -17,6 +17,7 @@ BRUSHED.mobileNav = function(){
 		}
                 $('#cab').css('margin-left', '-20px').css('margin-right','-20px');
 	} else {
+                $('#cab').css('margin-left', '0px').css('margin-right','0px');
 		$('#navigation-mobile').css('display', 'none');
 		if ($('#mobile-nav').hasClass('open')) {
 			$('#mobile-nav').removeClass('open');	
