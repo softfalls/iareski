@@ -14,7 +14,7 @@ desc.start=function(idimovel){
     desc.carregarFotos(json);    
     desc.preencherDados(json);
     
-    $("#descricao").dialog({ height: 750, width:500, modal: true, closeOnEscape: false });
+    $("#descricao").dialog({ height: 750, width:1100, modal: true, closeOnEscape: false });
     $(".ui-widget-header").css('background','#555').css('border','none');
 };
 

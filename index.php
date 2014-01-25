@@ -117,7 +117,7 @@
 
 <div id="cab" style="height: 18%; background: white; min-height: 100px;"> <!--#7F8289-->
     <img id="logo" title="iareski" src="imagens/logooficialempresa.png" alt="iareski_logo">
-    <div style="margin-top: -65px; color: #483D8B; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #C0C0C0; width: 200px; margin-left:800px"> 
+    <div style="margin-top: -65px; color: #483D8B; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #C0C0C0;  "> 
             <p> IARESKI IMÓVEIS (45) 3574-7043 </p>
     </div>
 </div>
@@ -230,7 +230,7 @@
 <!-- descricao Section -->
 <div id="descricao" class="page-alternate" title="">
     <div id="descFotoPrincipal"></div>
-    <ul id="descEspecificacao">
+    <ul id="descEspecificacao" style="width: 190px; margin-left:480px; margin-top:-370px;">
         <li id="descCodigo">Código </li>                        
         <li id="descVendaLoc">Imóvel para </li>                        
         <li id="descTipo">Tipo de imóvel </li>                        
@@ -246,8 +246,8 @@
         <li id="descAreaConst">Área construída </li>                        
         <li id="descValor">Valor do imóvel </li>                                                                      
     </ul>  
-    <div id="descDescricao"></div>
-    <div id="map"> </div>
+    <div id="descDescricao" style="width: 1100px; margin-left:0px; margin-top:60px;"></div>
+    <div id="map" style="margin-left:680px; margin-top:-502px;"> </div>
     
 </div>
 <!-- End descricao Section -->
