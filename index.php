@@ -117,7 +117,7 @@
 
 <div id="cab" style="height: 18%; background: white; min-height: 100px;"> <!--#7F8289-->
     <img id="logo" title="iareski" src="imagens/logooficialempresa.png" alt="iareski_logo">
-    <div style="margin-top: -65px; color: #483D8B; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #C0C0C0;  "> 
+    <div style="margin-top: -65px; color: #483D8B; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #C0C0C0; width: 200px; margin-left: 800px;"> 
             <p> IARESKI IMÓVEIS (45) 3574-7043 </p>
     </div>
 </div>
