@@ -39,8 +39,8 @@
 <link href="_include/css/supersized.shutter.css" rel="stylesheet">
 
 <!-- FancyBox -->
-<link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">
-
+<!--<link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">-->
+<link href="_include/css/pikachoose/bottom.css"rel="stylesheet">
 <!-- Font Icons -->
 <link href="_include/css/fonts.css" rel="stylesheet">
 
@@ -97,8 +97,10 @@
     }
     .fancybox-opened .fancybox-title { height: 220px; overflow: auto; }
     .fancybox-opened .fancybox-title p { text-align: justify; }
-    #descricao{display: none;}
+    
     #logo{ left: 25px; position: relative; top: 10px; width: 300px; }
+   
+
 </style>
 </head>
 
@@ -228,10 +230,14 @@
 <!-- End Our Work Section -->
 
 <!-- descricao Section -->
-<div id="descricao" class="page-alternate" title="">
-    <div id="descFotoPrincipal"></div>
-    <div id="map" style="float: right;"> </div>
-    <ul id="descEspecificacao" style="width: 550px; margin-left:480px; margin-top:-370px;">
+<div id="descricao" class="page-alternate" title="">    
+    <!--<div id="descFotoPrincipal"></div>-->
+    <div class="pikachoose" style="float: left;">
+        <ul id="pikame" class="jcarousel-skin-pika">
+            <!--<li><a href="http://www.pikachoose.com"><img src="../../1.jpg"/></a><span>This is an example of the basic theme.</span></li>-->            
+        </ul>
+    </div>
+    <ul id="descEspecificacao" style="float: right;">
         <li id="descCodigo">Código </li>                        
         <li id="descVendaLoc">Imóvel para </li>                        
         <li id="descTipo">Tipo de imóvel </li>
@@ -247,7 +253,11 @@
         <li id="descEndereco">Endereço </li>                        
         <li id="descValor">Valor do imóvel </li>
     </ul>  
-    <div id="descDescricao" style="width: 1100px; margin-left:0px; margin-top:140px;"></div>
+    <div id="map" style="float: right;"> </div>
+    <div id="descDescricao" style="width: 635px; float: left; text-align: justify;"></div>
+    
+    
+    
     <!--    //<div id="map" style="margin-left:680px; margin-top:-503px;"> </div>-->
     <!--<div id="map" style="float: right;"> </div>-->
     
@@ -502,14 +512,18 @@
 <script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
 <script src="_include/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
 <script src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
-<script src="_include/js/jquery.fancybox.pack.js"></script> <!-- Fancybox -->
-<script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+<!--<script src="_include/js/jquery.fancybox.pack.js"></script>  Fancybox -->
+<!--<script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+<!--<script src="_include/js/jquery.fancybox-thumbs.js"></script> Fancybox for Media -->
+<script src="_include/js/jquery.jcarousel.min.js"></script>
+<script src="_include/js/jquery.pikachoose.min.js"></script>
+<!--<script src="_include/js/jquery.touchwipe.min.js"></script>-->
 <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
 <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-<script src="_include/js/main.js?nocache=123"></script> <!-- Default JS -->
+<script src="_include/js/main.js?nocache=129"></script> <!-- Default JS -->
 <script src="js/jquery-ui-1.9.1.custom.min.js"></script> <!-- Index JS -->
 <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-<script src="js/descricao.js?23"></script> <!-- Index JS -->
+<script src="js/descricao.js?30"></script> <!-- Index JS -->
 <script src="js/index.js?2"></script> <!-- Index JS -->
 
 <!-- End Js -->

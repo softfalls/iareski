@@ -29,4 +29,4 @@
     $('#map-container').googleMap("rua xingu, foz do iguaçu");
   });
 </script>
-<div id="map-container" style="height: 400px; width: 400px;"></div>
+<div id="map-container" style="height: 285px; width: 400px;"></div>

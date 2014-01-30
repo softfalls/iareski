@@ -163,7 +163,7 @@ BRUSHED.filter = function (){
 BRUSHED.fancyBox = function(){
 	if($('.fancybox').length > 0 || $('.fancybox-media').length > 0 || $('.fancybox-various').length > 0){
 		
-		$(".fancybox").fancybox({				
+		/*$(".fancybox").fancybox({				
 				padding : 0,
 				beforeShow: function () {
 					this.title = $(this.element).attr('title');
@@ -182,7 +182,7 @@ BRUSHED.fancyBox = function(){
                                     //this.width  = parseInt(this.element.data('fancybox-width'));  
                                     //this.height = parseInt(this.element.data('fancybox-height'));
                                 }*/
-			});
+			/*});
 			
 		$('.fancybox-media').fancybox({
 			openEffect  : 'none',
@@ -190,7 +190,7 @@ BRUSHED.fancyBox = function(){
 			helpers : {
 				media : {}
 			}
-		});
+		});*/
 	}
 }
 

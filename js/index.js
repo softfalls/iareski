@@ -52,7 +52,7 @@ index.getContrato=function(obj){
 };
 
 index.descricao=function(idimovel){
-    $('.fancybox-close').click();
+   // $('.fancybox-close').click();
         
     desc.start(idimovel);    
 };
