@@ -254,7 +254,7 @@
         <li id="descValor">Valor do imóvel </li>
     </ul>  
     <div id="map" style="float: right;"> </div>
-    <div id="descDescricao" style="width: 635px; float: left; text-align: justify;"></div>
+    <div id="descDescricao" style="width: 635px; float: left; text-align: justify; height: 130px; overflow: auto;"></div>
     
     
     
