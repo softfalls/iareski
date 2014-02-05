@@ -85,7 +85,7 @@ desc.getTipoImovel=function(idtipo){
 desc.posicaoContato=function(){
     var codigo = $("#descCodigo").text();
     $(".ui-dialog-titlebar-close").click();
-    $("contact_message").val(codigo);
+    $("#contact_message").val(codigo);
     $('body, html').scrollTop()({scrollTop : $("#contact")}, 750, 'easeOutExpo');
     
 };
