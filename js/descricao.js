@@ -15,7 +15,8 @@ desc.start=function(idimovel){
     desc.preencherDados(json);
     
     $("#descricao").dialog({ height: 750, width:1100, modal: true, closeOnEscape: false });
-    $(".ui-widget-header").css('background','#555').css('border','none');
+//    $(".ui-widget-header").css('background','#555').css('border','none');   
+//   $('#btContato').click(function(){ desc.posicaoContato(); }); 
 };
 
 desc.carregarFotos=function(json){      
@@ -80,6 +81,15 @@ desc.getTipoImovel=function(idtipo){
         case '16' : return 'Comercial e Residencial';
     }
 };
+
+desc.posicaoContato=function(){
+    var codigo = $("#descCodigo").text();
+    $(".ui-dialog-titlebar-close").click();
+    $("contact_message").val(codigo);
+    $('body, html').scrollTop()({scrollTop : $("#contact")}, 750, 'easeOutExpo');
+    
+};
+
 
 desc.ajax=function(obj,funcao,view){ // FUNÇÃO AJAX
     var data = {'obj':obj,'funcao':funcao}; // SETA OS PARAMETROS

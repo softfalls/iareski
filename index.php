@@ -255,8 +255,11 @@
     </ul>  
     <div id="map" style="float: right;"> </div>
     <div id="descDescricao" style="width: 635px; float: left; text-align: justify; height: 130px; overflow: auto;"></div>
+    <a href="#contact" onclick="javascript:desc.posicaoContato();" style="color: #555555; float: right; margin-right: 100px; margin-top: 50px"> Contato / Mensagem  </a>
     
-    
+    <!--<<a href="#" style="color: #555555; float: right; margin-right: 100px; margin-top: 50px"> Contato / Mensagem  </a>;-->
+
+
     
     <!--    //<div id="map" style="margin-left:680px; margin-top:-503px;"> </div>-->
     <!--<div id="map" style="float: right;"> </div>-->
