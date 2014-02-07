@@ -99,8 +99,8 @@
     .fancybox-opened .fancybox-title p { text-align: justify; }
     
     #logo{ left: 25px; position: relative; top: 10px; width: 300px; }
-   
-
+    #linkContato:hover{ color: red;}
+    #linkContato{color: #555555;}
 </style>
 </head>
 
@@ -255,7 +255,7 @@
     </ul>  
     <div id="map" style="float: right;"> </div>
     <div id="descDescricao" style="width: 635px; float: left; text-align: justify; height: 130px; overflow: auto;"></div>
-    <a href="#contact" onclick="javascript:desc.posicaoContato();" style="color: #555555; float: right; margin-right: 100px; margin-top: 50px"> Contato / Mensagem  </a>
+    <a id="linkContato" href="#contact" onclick="javascript:desc.posicaoContato();" style="float: right; margin-right: 100px; margin-top: 50px">[+] Contato / Mensagem  </a>
     
     <!--<<a href="#" style="color: #555555; float: right; margin-right: 100px; margin-top: 50px"> Contato / Mensagem  </a>;-->
 

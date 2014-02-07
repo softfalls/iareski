@@ -15,6 +15,7 @@ desc.start=function(idimovel){
     desc.preencherDados(json);
     
     $("#descricao").dialog({ height: 750, width:1100, modal: true, closeOnEscape: false });
+    //$('#linkContato').hover(function(){ $(this).css('color','red') });
 //    $(".ui-widget-header").css('background','#555').css('border','none');   
 //   $('#btContato').click(function(){ desc.posicaoContato(); }); 
 };
