@@ -100,6 +100,7 @@
     
     #logo{ left: 25px; position: relative; top: 10px; width: 300px; }
     #linkContato:hover{ color: red;}
+    #descricao{display: none;}
     #linkContato{color: #555555;}
 </style>
 </head>
