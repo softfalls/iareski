@@ -101,7 +101,9 @@
     #logo{ left: 25px; position: relative; top: 10px; width: 300px; }
     #linkContato:hover{ color: red;}
     #descricao{display: none;}
+    #descEspecificacao li { width: 385px; overflow: hidden;}
     #linkContato{color: #555555;}
+    
 </style>
 </head>
 
