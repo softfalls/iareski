@@ -471,6 +471,35 @@
 </div> -->
 <!-- End Twitter Feed -->
 
+<!-- Bancos financiamento Section -->
+<div id="bancos" class="page-alternate" style="height: 30px">
+    <div class="container">
+        <!-- Title Page -->
+        <div class="row">
+            <div class="span12">
+                <div class="title-page">
+                    <h2 class="title" style="margin-top: -80px;" >Simulações de Financiamento</h2>                    
+                </div>
+            </div>
+        </div>
+        <!-- End Title Page -->
+
+        <div class="row">    	
+            <div class="span4 profile">
+                <img border="0" style="position:absolute;top: 20%;left: 27%;"usemap="#Map10" src="http://www.iareskiimoveis.com.br/templates/novo/imagens/simuladores.png">
+                <map id="Map10" name="Map10">
+                    <area target="_blank" href="http://www.santander.com.br/portal/wps/script/templates/GCMRequest.do?page=5516" coords="16,70,117,138" shape="rect">
+                    <area target="_blank" href="https://www42.bb.com.br/portalbb/creditoImobiliario/Proposta,2,2250,2250.bbx" coords="132,69,234,136" shape="rect">
+                    <area target="_blank" href="http://www8.caixa.gov.br/siopiinternet/simulaOperacaoInternet.do?method=inicializarCasoUso" coords="251,71,351,137" shape="rect">
+                    <area target="_blank" href="http://www.itau.com.br/imobline/" coords="467,69,569,137" shape="rect">
+                    <area target="_blank" href="http://www.shopcredit.com.br/simuladores/conteudo/simulador/stsmtipocredimob.aspx?Prf=8&Prd=1&SiteOrigem=Imoveis" coords="360,69,456,139" shape="rect">
+                </map>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- Socialize -->
 <div id="social-area" class="page">
 	<div class="container">
