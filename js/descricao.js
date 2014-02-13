@@ -35,6 +35,7 @@ desc.start=function(idimovel){
 };
 
 desc.carregarFotos=function(json){      
+    console.log('desc.carregarFotos');
     $('#pikame').empty();
     var a = new Array();
     for(var i=0; i<json.fotos.length; i++){                
@@ -49,6 +50,7 @@ desc.carregarFotos=function(json){
 };
 
 desc.preencherDados=function(json){
+    console.log('desc.preencherDados');
     var obj = json.obj;
     obj.venda = obj.venda=='1' ? 'venda' : '';
     obj.locacao = obj.locacao=='1' ? 'locacao' : '';
@@ -70,13 +72,12 @@ desc.preencherDados=function(json){
     $("#descDescricao").text(obj.descricao);
     
     var mapaLink = obj.logradouro+" "+obj.numero+", "+obj.cidade;    
-    $('#map').load('map.php',function(){ 
-        $('#map-container').googleMap(mapaLink);
-        desc.show();
-    });
+    $('#map').load('map.php',function(){ $('#map-container').googleMap(mapaLink); });
+    
 };
 
 desc.show=function(){
+    console.log('desc.show()');
     $("#descricao").show();
     $("#menu-descricao").click();
 };

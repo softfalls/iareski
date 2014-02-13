@@ -4,21 +4,53 @@
  */
 
 (function($){
-$.getUrlVar = function(key){
-var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
-return result && unescape(result[1]) || "";
-};
+    $.getUrlVar = function(key){
+    var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
+    return result && unescape(result[1]) || "";
+    };
 })(jQuery);
+
+$.fn.googleMap = function(address, options) {
+    var defaults = {
+        lat: 44.081996,
+        long: -123.0286928,
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    options = $.extend(defaults, options || {});
+
+    var center = new google.maps.LatLng(options.lat, options.long);
+    var map = new google.maps.Map(this.get(0), $.extend(options, {center: center}));
+
+    var geocoder = new google.maps.Geocoder();
+    geocoder.geocode(
+        {address: address}, 
+        function(results, status) {
+            if (status == google.maps.GeocoderStatus.OK && results.length) {
+                if (status != google.maps.GeocoderStatus.ZERO_RESULTS) {
+                    map.setCenter(results[0].geometry.location);
+                    var marker = new google.maps.Marker({
+                        position: results[0].geometry.location,
+                        map: map                        
+                    });
+                    google.maps.event.addDomListener(window, 'load', desc.show());                    
+                    
+                }
+            }
+        });
+};
 
 
 var index={};
 
 index.start=function(){        
+    console.log('index.start');
     $(document).bind("contextmenu",function(e){ alert("Direitos reservados"); return false; });
     //$('#home-slider').css('height','70%'); // ALTERE AQUI E NA DIV COM ID='CAB'
     var id = $.getUrlVar('descricao');
     id != "" ?  desc.start(id): $("#descricao").hide();
-    console.log('index.start');
+    
 };
 
 index.getCodigo=function(){
