@@ -10,14 +10,15 @@ return result && unescape(result[1]) || "";
 };
 })(jQuery);
 
+
 var index={};
 
-index.start=function(){
-    index.carregarFotos();   
+index.start=function(){        
     $(document).bind("contextmenu",function(e){ alert("Direitos reservados"); return false; });
     //$('#home-slider').css('height','70%'); // ALTERE AQUI E NA DIV COM ID='CAB'
     var id = $.getUrlVar('descricao');
     id != "" ?  desc.start(id): $("#descricao").hide();
+    console.log('index.start');
 };
 
 index.getCodigo=function(){
@@ -50,6 +51,7 @@ index.carregarFotos=function(){
         foto===null? '' : $('#thumbs').append(li);
     }    
     index.getCodigo();
+    console.log('index.carregarFotos');
 };
 
 index.getContrato=function(obj){    
@@ -111,3 +113,4 @@ index.ajax=function(obj,funcao,view){ // FUNÇÃO AJAX
     }); // FIM DO AJAX   
     return retorno; // RETORNO DA FUNÇÃO
 };
+ //index.start();

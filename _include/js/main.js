@@ -1,6 +1,6 @@
 jQuery(function($){
 
-var BRUSHED = window.BRUSHED || {};
+ var BRUSHED = window.BRUSHED || {};
 
 /* ==================================================
    Mobile Navigation
@@ -23,7 +23,8 @@ BRUSHED.mobileNav = function(){
 			$('#mobile-nav').removeClass('open');	
 		}
 	}
-}
+        console.log('BRUSHED.mobileNav');
+};
 
 BRUSHED.listenerMenu = function(){
 	$('#mobile-nav').on('click', function(e){
@@ -41,7 +42,9 @@ BRUSHED.listenerMenu = function(){
 		$('#mobile-nav').removeClass('open');
 		$('#navigation-mobile').slideUp(350, 'easeOutExpo');
 	});
-}
+        
+        console.log('BRUSHED.listenerMenu');
+};
 
 
 /* ==================================================
@@ -91,7 +94,7 @@ BRUSHED.slider = function(){
 		mouse_scrub		:   0		
 	});
 
-}
+};
 
 
 /* ==================================================
@@ -100,7 +103,8 @@ BRUSHED.slider = function(){
 
 BRUSHED.nav = function(){
 	$('.sticky-nav').waypoint('sticky');
-}
+        console.log('BRUSHED.nav');
+};
 
 
 /* ==================================================
@@ -153,7 +157,8 @@ BRUSHED.filter = function (){
 			return false;
 		});
 	}
-}
+        console.log('BRUSHED.filter');
+};
 
 
 /* ==================================================
@@ -192,7 +197,8 @@ BRUSHED.fancyBox = function(){
 			}
 		});*/
 	}
-}
+        console.log('BRUSHED.fancybox');
+};
 
 
 /* ==================================================
@@ -222,7 +228,8 @@ BRUSHED.contactForm = function(){
 		});
 		return false;
 	});
-}
+        console.log('BRUSHED.contactForm');
+};
 
 
 /* ==================================================
@@ -254,9 +261,8 @@ BRUSHED.tweetFeed = function(){
 	  };
 	  ticker();
 	});
-	
-}
-
+	console.log('BRUSHED.tweetFeed');
+};
 
 /* ==================================================
    Menu Highlight
@@ -272,7 +278,8 @@ BRUSHED.menu = function(){
 		easing: 'easeOutExpo',
 		filter: ':not(.external)'
 	});
-}
+        console.log('BRUSHED.menu');
+};
 
 /* ==================================================
    Next Section
@@ -285,7 +292,8 @@ BRUSHED.goSection = function(){
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
-}
+        console.log('BRUSHED.goSection');
+};
 
 /* ==================================================
    GoUp
@@ -298,7 +306,8 @@ BRUSHED.goUp = function(){
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
 		return false;
 	});
-}
+        console.log('BRUSHED.goUp');
+};
 
 
 /* ==================================================
@@ -314,7 +323,7 @@ BRUSHED.scrollToTop = function(){
 	$arrow.click(function(e) {
 		$('body,html').animate({ scrollTop: "0" }, 750, 'easeOutExpo' );
 		e.preventDefault();
-	})
+	});
 
 	$(window).scroll(function() {
 		didScroll = true;
@@ -331,7 +340,8 @@ BRUSHED.scrollToTop = function(){
 			}
 		}
 	}, 250);
-}
+        console.log('BRUSHED.scrollTop');
+};
 
 /* ==================================================
    Thumbs / Social Effects
@@ -353,8 +363,9 @@ BRUSHED.utils = function(){
 		$(".active").removeClass("active");
       	$(this).addClass('active');
     });
+    console.log('BRUSHED.utils');
 	
-}
+};
 
 /* ==================================================
    Accordion
@@ -376,7 +387,8 @@ BRUSHED.accordion = function(){
 	 	}
 		event.preventDefault();
 	});
-}
+        console.log('BRUSHED.accordion');
+};
 
 /* ==================================================
    Toggle
@@ -396,7 +408,8 @@ BRUSHED.toggle = function(){
 	 	}
 		event.preventDefault();
 	});
-}
+        console.log('BRUSHED.toggle');
+};
 
 /* ==================================================
    Tooltip
@@ -404,8 +417,8 @@ BRUSHED.toggle = function(){
 
 BRUSHED.toolTip = function(){ 
     $('a[data-toggle=tooltip]').tooltip();
-}
-
+    console.log('BRUSHED.toolTip');
+};
 
 /* ==================================================
 	Init
@@ -442,6 +455,7 @@ $(document).ready(function(){
 		}
 	});
 	
+        index.carregarFotos();
 	BRUSHED.nav();
 	BRUSHED.mobileNav();
 	BRUSHED.listenerMenu();
@@ -458,6 +472,7 @@ $(document).ready(function(){
 	BRUSHED.toggle();
 	BRUSHED.toolTip();
         index.start();
+        
 });
 
 $(window).resize(function(){

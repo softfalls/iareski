@@ -564,11 +564,12 @@
 <!--<script src="_include/js/jquery.touchwipe.min.js"></script>-->
 <script src="_include/js/jquery.tweet.js"></script> <!-- Tweet -->
 <script src="_include/js/plugins.js"></script> <!-- Contains: jPreloader, jQuery Easing, jQuery ScrollTo, jQuery One Page Navi -->
-<script src="_include/js/main.js?nocache=129"></script> <!-- Default JS -->
+
 <script src="js/jquery-ui-1.9.1.custom.min.js"></script> <!-- Index JS -->
 <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-<script src="js/descricao.js?31"></script> <!-- Index JS -->
-<script src="js/index.js?5"></script> <!-- Index JS -->
+<script src="js/descricao.js?31"></script><!--  Index JS -->
+<script src="js/index.js?5"></script><!-- Index JS -->
+<script src="_include/js/main.js?nocache=129"></script> <!-- Default JS -->
 
 <!-- End Js -->
 
