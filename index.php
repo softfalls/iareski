@@ -100,7 +100,8 @@
     
     #logo{ left: 25px; position: relative; top: 10px; width: 300px; }
     #linkContato:hover{ color: red;}
-    #descricao{display: none;}
+    /*#descricao{display: none; height: 100%; margin: auto; width: 1100px;}*/
+    
     #descEspecificacao li { width: 385px; overflow: hidden;}
     #linkContato{color: #555555;}
     
@@ -161,6 +162,7 @@
         	<ul id="menu-nav">
             	<li class="current"><a href="#home-slider">Home</a></li>
                 <li><a href="#work">Imóveis</a></li>                               
+                <li style="display: none;"><a href="#descricao" id="menu-descricao">Descricao</a></li>                               
                 <li><a href="#contact">Contato</a></li>
                 <!--<li><a href="shortcodes.html" class="external">Shortcodes</a></li>-->
             </ul>
@@ -233,40 +235,47 @@
 <!-- End Our Work Section -->
 
 <!-- descricao Section -->
-<div id="descricao" class="page-alternate" title="">    
-    <!--<div id="descFotoPrincipal"></div>-->
-    <div class="pikachoose" style="float: left;">
-        <ul id="pikame" class="jcarousel-skin-pika">
-            <!--<li><a href="http://www.pikachoose.com"><img src="../../1.jpg"/></a><span>This is an example of the basic theme.</span></li>-->            
-        </ul>
+<div id="descricao" class="page-alternate" title="" >    
+    <div class="container">
+        <!-- Title Page -->
+        <div class="row">
+            <div class="span12">
+                <div class="title-page" style="margin:0;" >
+                    <h2 class="title" style="font-size: 35px;">Descrição</h2>                    
+                </div>
+            </div>
+        </div>
+        <!-- End Title Page -->
+    
+        <div class="row">
+            <div class="span12">
+                <div class="pikachoose" style="float: left;">
+                    <ul id="pikame" class="jcarousel-skin-pika">
+                        <!--<li><a href="http://www.pikachoose.com"><img src="../../1.jpg"/></a><span>This is an example of the basic theme.</span></li>-->            
+                    </ul>
+                </div>
+                <ul id="descEspecificacao" style="float: right;">
+                    <li id="descCodigo">Código </li>                        
+                    <li id="descVendaLoc">Imóvel para </li>                        
+                    <li id="descTipo">Tipo de imóvel </li>
+                    <li id="descAreaTerreno">Área do terreno </li>                        
+                    <li id="descAreaConst">Área construída </li>    
+                    <li id="descQuarto">Qtd Quarto </li>
+                    <li id="descSuite">Qtd Suíte </li>
+                    <li id="descSala">Qtd Sala </li>
+                    <li id="descCozinha">Qtd Cozinha </li>
+                    <li id="descEstado">Estado </li>                        
+                    <li id="descCidade">Cidade </li>    
+                    <li id="descBairro">Bairro </li>                        
+                    <li id="descEndereco">Endereço </li>                        
+                    <li id="descValor">Valor do imóvel </li>
+                </ul>  
+                <div id="map" style="float: right;"> </div>
+                <div id="descDescricao" style="width: 635px; float: left; text-align: justify; height: 130px; overflow: auto;"></div>
+                <a id="linkContato" href="#contact" onclick="javascript:desc.posicaoContato();" style="float: right; margin-right: 100px; margin-top: 50px">[+] Contato / Mensagem  </a>
+            </div>
+        </div>        
     </div>
-    <ul id="descEspecificacao" style="float: right;">
-        <li id="descCodigo">Código </li>                        
-        <li id="descVendaLoc">Imóvel para </li>                        
-        <li id="descTipo">Tipo de imóvel </li>
-        <li id="descAreaTerreno">Área do terreno </li>                        
-        <li id="descAreaConst">Área construída </li>    
-        <li id="descQuarto">Qtd Quarto </li>
-        <li id="descSuite">Qtd Suíte </li>
-        <li id="descSala">Qtd Sala </li>
-        <li id="descCozinha">Qtd Cozinha </li>
-        <li id="descEstado">Estado </li>                        
-        <li id="descCidade">Cidade </li>    
-        <li id="descBairro">Bairro </li>                        
-        <li id="descEndereco">Endereço </li>                        
-        <li id="descValor">Valor do imóvel </li>
-    </ul>  
-    <div id="map" style="float: right;"> </div>
-    <div id="descDescricao" style="width: 635px; float: left; text-align: justify; height: 130px; overflow: auto;"></div>
-    <a id="linkContato" href="#contact" onclick="javascript:desc.posicaoContato();" style="float: right; margin-right: 100px; margin-top: 50px">[+] Contato / Mensagem  </a>
-    
-    <!--<<a href="#" style="color: #555555; float: right; margin-right: 100px; margin-top: 50px"> Contato / Mensagem  </a>;-->
-
-
-    
-    <!--    //<div id="map" style="margin-left:680px; margin-top:-503px;"> </div>-->
-    <!--<div id="map" style="float: right;"> </div>-->
-    
 </div>
 <!-- End descricao Section -->
 
@@ -558,8 +567,8 @@
 <script src="_include/js/main.js?nocache=129"></script> <!-- Default JS -->
 <script src="js/jquery-ui-1.9.1.custom.min.js"></script> <!-- Index JS -->
 <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-<script src="js/descricao.js?30"></script> <!-- Index JS -->
-<script src="js/index.js?2"></script> <!-- Index JS -->
+<script src="js/descricao.js?31"></script> <!-- Index JS -->
+<script src="js/index.js?5"></script> <!-- Index JS -->
 
 <!-- End Js -->
 

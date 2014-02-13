@@ -3,6 +3,12 @@
  * Arquivo alterando teste
  */
 
+(function($){
+$.getUrlVar = function(key){
+var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
+return result && unescape(result[1]) || "";
+};
+})(jQuery);
 
 var index={};
 
@@ -10,7 +16,8 @@ index.start=function(){
     index.carregarFotos();   
     $(document).bind("contextmenu",function(e){ alert("Direitos reservados"); return false; });
     //$('#home-slider').css('height','70%'); // ALTERE AQUI E NA DIV COM ID='CAB'
-    
+    var id = $.getUrlVar('descricao');
+    id != "" ?  setTimeout(function(){ desc.start(id);},2000) : '';
 };
 
 index.getCodigo=function(){

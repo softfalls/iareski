@@ -7,15 +7,29 @@
 var desc = {};
 
 desc.start=function(idimovel){
-       
+    $("#menu-descricao").click();
+    window.history.pushState('Object', 'Iareski Imóveis', '?descricao='+idimovel);
     var obj = new Object();
     obj.idimovel = idimovel;
     var json = desc.ajax(obj,'getFotosById','view/vDescricao.php');  
     desc.carregarFotos(json);    
     desc.preencherDados(json);
     
-    $("#descricao").dialog({ height: 750, width:1100, modal: true, closeOnEscape: false });
-    //$('#linkContato').hover(function(){ $(this).css('color','red') });
+    
+    //var $target = $('#descricao').offset().top-55;
+    //$('body, html').animate({scrollTop : $('#descricao').offset().top-55}, 750, 'easeOutExpo');
+    //$("#menu-descricao").attr('href','#descricao='+idimovel).click();
+    //window.location.hash = "descricao="+idimovel;
+    
+    
+    //setTimeout(function(){ $("#menu-descricao").click(); },1000);
+    
+    
+    
+    
+    //$("#descricao").dialog({ height: 750, width:1100, modal: true, closeOnEscape: false });
+    
+//$('#linkContato').hover(function(){ $(this).css('color','red') });
 //    $(".ui-widget-header").css('background','#555').css('border','none');   
 //   $('#btContato').click(function(){ desc.posicaoContato(); }); 
 };
@@ -86,8 +100,8 @@ desc.getTipoImovel=function(idtipo){
 desc.posicaoContato=function(){
     var codigo = $("#descCodigo").text();
     $(".ui-dialog-titlebar-close").click();
-    $("#contact_message").val('Referente ao imóvel '+codigo+' - Mensagem:');
-    $('body, html').scrollTop()({scrollTop : $("#contact")}, 750, 'easeOutExpo');
+    $("#contact_message").val('Referente ao imóvel '+codigo+' - Mensagem:');    
+    $('body, html').animate({scrollTop : $("#contact").offset().top }, 750, 'easeOutExpo');
     
 };
 
