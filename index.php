@@ -103,7 +103,7 @@
     /*#descricao{display: none; height: 100%; margin: auto; width: 1100px;}*/
     
     #descEspecificacao li { width: 385px; overflow: hidden;}
-    #linkContato{color: #555555;}
+    #linkContato{color: whitesmoke;}
     
 </style>
 </head>
