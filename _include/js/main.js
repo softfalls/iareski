@@ -445,15 +445,7 @@ $(document).ready(function(){
 	]);
 	
 	// Preload the page with jPreLoader
-	$('body').jpreLoader({
-		splashID: "#jSplash",
-		showSplash: true,
-		showPercentage: true,
-		autoClose: true,
-		splashFunction: function() {
-			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
-		}
-	});
+	
 	
         index.carregarFotos();
 	BRUSHED.nav();
@@ -472,6 +464,16 @@ $(document).ready(function(){
 	BRUSHED.toggle();
 	BRUSHED.toolTip();
         index.start();
+        
+        $('body').jpreLoader({ //Segura no "carregando" enquando carrega as imagens do site
+		splashID: "#jSplash",
+		showSplash: true,
+		showPercentage: true,
+		autoClose: true,
+		splashFunction: function() {
+			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
+		}
+	});
         
 });
 
