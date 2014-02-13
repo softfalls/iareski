@@ -7,7 +7,7 @@
 var desc = {};
 
 desc.start=function(idimovel){
-    $("#menu-descricao").click();
+    
     window.history.pushState('Object', 'Iareski Imóveis', '?descricao='+idimovel);
     var obj = new Object();
     obj.idimovel = idimovel;
@@ -69,11 +69,16 @@ desc.preencherDados=function(json){
     $("#descValor").text("Valor do imóvel: ("+obj.valor_aluguel+' aluguel) ('+obj.valor_venda+' venda)');
     $("#descDescricao").text(obj.descricao);
     
-    var mapaLink = obj.logradouro+" "+obj.numero+", "+obj.cidade;
-    
-    $('#map').load('map.php',function(){ $('#map-container').googleMap(mapaLink);});
-    
-    
+    var mapaLink = obj.logradouro+" "+obj.numero+", "+obj.cidade;    
+    $('#map').load('map.php',function(){ 
+        $('#map-container').googleMap(mapaLink);
+        desc.show();
+    });
+};
+
+desc.show=function(){
+    $("#descricao").show();
+    $("#menu-descricao").click();
 };
 
 desc.getTipoImovel=function(idtipo){

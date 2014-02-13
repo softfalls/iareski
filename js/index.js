@@ -17,7 +17,7 @@ index.start=function(){
     $(document).bind("contextmenu",function(e){ alert("Direitos reservados"); return false; });
     //$('#home-slider').css('height','70%'); // ALTERE AQUI E NA DIV COM ID='CAB'
     var id = $.getUrlVar('descricao');
-    id != "" ?  setTimeout(function(){ desc.start(id);},2000) : '';
+    id != "" ?  desc.start(id): $("#descricao").hide();
 };
 
 index.getCodigo=function(){
@@ -111,5 +111,3 @@ index.ajax=function(obj,funcao,view){ // FUNÇÃO AJAX
     }); // FIM DO AJAX   
     return retorno; // RETORNO DA FUNÇÃO
 };
-
-index.start();

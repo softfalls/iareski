@@ -457,6 +457,7 @@ $(document).ready(function(){
 	BRUSHED.accordion();
 	BRUSHED.toggle();
 	BRUSHED.toolTip();
+        index.start();
 });
 
 $(window).resize(function(){
