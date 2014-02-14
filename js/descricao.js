@@ -7,7 +7,7 @@
 var desc = {};
 
 desc.start=function(idimovel){
-    
+    desc.show();
     window.history.pushState('Object', 'Iareski Imóveis', '?descricao='+idimovel);
     var obj = new Object();
     obj.idimovel = idimovel;
