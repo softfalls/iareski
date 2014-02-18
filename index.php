@@ -163,6 +163,7 @@
             	<li class="current"><a href="#home-slider">Home</a></li>
                 <li><a href="#work">Imóveis</a></li>                               
                 <li style="display: none;"><a href="#descricao" id="menu-descricao">Descricao</a></li>                               
+                <li><a href="#about">Sobre</a></li>
                 <li><a href="#contact">Contato</a></li>
                 <!--<li><a href="shortcodes.html" class="external">Shortcodes</a></li>-->
             </ul>
@@ -303,105 +304,7 @@
 </div>
 <!-- End sofrildo Section -->
 
-<!-- About Section -->
-<!--<div id="about" class="page-alternate">
-<div class="container">
-    <!-- Title Page -->
-    <!--<div class="row">
-        <div class="span12">
-            <div class="title-page">
-                <h2 class="title">Sobre</h2>
-                <h3 class="title-description">Saiba mais sobre nossa equipe e Cultura.</h3>
-            </div>
-        </div>
-    </div>
-    <!-- End Title Page -->
-    
-    <!-- People -->
-    <!--<div class="row">
-    	
-        <!-- Start Profile -->
-    	<!--<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Analista de Sistemas</span>
-                </div>
-                <img src="_include/img/profile/maison-curriculo.jpg" alt="Maison K. Sakamoto" style="width: 370px;">
-            </div>
-            <h3 class="profile-name">Maison K. Sakamoto</h3>
-            <p class="profile-description">
-                - Coordenador/supervisor do departamento de T.I.<br/>
-                - Analise e desenvolvimento de sistemas de sistemas web. <br/>
-                - Administrador da rede, site da empresa e sistemas. <br/>
-                - Monitoramento dos servidores/sistemas das filiais. <br/>
-                - Desenvolvimento de ERP personalizado da empresa. <br/>
-                - Treinamento de usuários ao sistema ERP. <br/>
-                - Gerenciamento de novos projetos referentes ao departamento de TI. <br/>
-                - Líder de equipe de programadores e suporte.
-            </p>
-            	
-            <div class="social">
-            	<ul class="social-icons">
-                	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-dribbble"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-facebook"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<!--<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Creative Director</span>
-                </div>
-                <img src="_include/img/profile/profile-02.jpg" alt="Jane Helf">
-            </div>
-            <h3 class="profile-name">Edmilson Iareski</h3>
-            <p class="profile-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat <a href="#">hendrerit dictum</a>. 
-            Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-            	
-            <div class="social">
-            	<ul class="social-icons">
-                	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-email"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- End Profile -->
-        
-        <!-- Start Profile -->
-    	<!--<div class="span4 profile">
-        	<div class="image-wrap">
-                <div class="hover-wrap">
-                    <span class="overlay-img"></span>
-                    <span class="overlay-text-thumb">Lead Designer</span>
-                </div>
-                <img src="_include/img/profile/profile-03.jpg" alt="Joshua Insanus">
-            </div>
-            <h3 class="profile-name">Mike Iareski</h3>
-            <p class="profile-description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ac augue at erat <a href="#">hendrerit dictum</a>. 
-            Praesent porta, purus eget sagittis imperdiet, nulla mi ullamcorper metus, id hendrerit metus diam vitae est. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-            	
-            <div class="social">
-            	<ul class="social-icons">
-                	<li><a href="#"><i class="font-icon-social-twitter"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-linkedin"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-google-plus"></i></a></li>
-                    <li><a href="#"><i class="font-icon-social-vimeo"></i></a></li>
-                </ul>
-            </div>
-        </div>
-        <!-- End Profile -->
-        
-        <!--</div>
-    <!-- End People -->
-    <!--</div>
-<!--</div>
-<!-- End About Section -->
+
 
 
 <!-- Contact Section -->
@@ -465,6 +368,64 @@
 </div>
 <!-- End Contact Section -->
 
+<!-- About Section -->
+<div id="about" class="page-alternate">
+<div class="container">
+    <!-- Title Page -->
+    <div class="row">
+        <div class="span12">
+            <div class="title-page">
+                <h2 class="title">Sobre</h2>
+                <h3 class="title-description">Saiba mais sobre nossa equipe e Cultura.</h3>
+            </div>
+        </div>
+    </div>
+    <!-- End Title Page -->
+    
+    <!-- People -->
+    <div class="row">
+    	
+        <!-- Start Profile -->
+    	<div class="span4 profile">
+        	
+            <h3 class="profile-name">Visão</h3>
+            <p class="profile-description">
+                Ser reconhecida no mercado como empresa referência no mercado imobiliário de Foz e região.
+            </p>
+            	
+          
+        </div>
+        <!-- End Profile -->
+        
+        <!-- Start Profile -->
+    	<div class="span4 profile">            
+            <h3 class="profile-name">Missão</h3>
+            <p class="profile-description">
+            Buscar excelência nos serviços imobiliários, através de um relacionamento de credibilidade confiança
+            e continuidade com todos os clientes envolvidos.
+            </p>
+            
+        </div>
+        <!-- End Profile -->
+        
+        <!-- Start Profile -->
+    	<div class="span4 profile">        	
+            <h3 class="profile-name">Valores</h3>
+            <p class="profile-description">
+            <ul style="text-align: justify">
+                <li>Honestidade, palavra.</li>
+                <li>Não realizamos negócios de maneira a prejudicar a imagem da empresa perante os clientes.</li>
+                <li>Relacionamento de confiança com o Cliente e Comprometimento com a empresa.</li>
+            </ul>
+            </p>
+        </div>
+        <!-- End Profile -->        
+        </div>
+    <!-- End People -->
+    </div>
+</div>
+<!-- End About Section -->
+
 <!-- Twitter Feed
 <div id="twitter-feed" class="page-alternate">
 	<div class="container">
@@ -483,7 +444,7 @@
 <!-- End Twitter Feed -->
 
 <!-- Bancos financiamento Section -->
-<div id="bancos" class="page-alternate" style="height: 30px">
+<div id="bancos" class="page" style="height: 30px">
     <div class="container">
         <!-- Title Page -->
         <div class="row">
