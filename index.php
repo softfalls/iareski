@@ -129,7 +129,7 @@
 </div>
 
 <!-- Homepage Slider -->
-<div id="home-slider">	
+<!--<div id="home-slider">	
     <div class="overlay"></div>
 
     <div class="slider-text">
@@ -146,6 +146,7 @@
         <a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a>
     </div>
 </div>
+-->
 <!-- End Homepage Slider -->
 
 
@@ -155,12 +156,12 @@
     	<a id="mobile-nav" class="menu-nav" href="#menu-nav"></a>
         
         <div id="logo">
-        	<a id="goUp" href="#home-slider" title="IARESKI IMÓVEIS">IARESKI</a>
+        	<a id="goUp" href="#cab" title="IARESKI IMÓVEIS">IARESKI</a>
         </div>
         
         <nav id="menu">
         	<ul id="menu-nav">
-            	<li class="current"><a href="#home-slider">Home</a></li>
+            	<li class="current"><a href="#cab">Home</a></li>
                 <li><a href="#work">Imóveis</a></li>                               
                 <li style="display: none;"><a href="#descricao" id="menu-descricao">Descricao</a></li>                               
                 <li><a href="#about">Sobre</a></li>
