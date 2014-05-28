@@ -51,6 +51,7 @@ index.start=function(){
     var id = $.getUrlVar('descricao');
     id != "" ?  desc.start(id): $("#descricao").hide();
     
+    jQuery(function(){ jQuery('#camera').camera({fx: 'scrollLeft', time: 2000, pagination: true }); });    
 };
 
 index.getCodigo=function(){
@@ -61,12 +62,14 @@ index.getCodigo=function(){
 index.carregarFotos=function(){
     var obj = new Object();    
     var array = index.ajax(obj,'getImovelAtivo','view/vImovel.php');
+    index.arrayGlobal = array;
+    array.imovel = index.shuffle(array.imovel);
     var path = 'http://iareskiimoveis.com.br/imagens/imoveis/';
-    for(var i=0; i<array.imovel.length; i++){
+    for(var i=0; i< array.imovel.length; i++){
         var obj = array.imovel[i];
         var classe = index.getClassImovel(obj);
         var foto = index.getFoto(obj.idimovel,array.fotos);
-        var li = $('<li>').addClass(classe).attr('idimovel',obj.idimovel);
+        var li = $('<li>').addClass(classe).attr('idimovel',obj.idimovel);        
         var a = foto===null? $('<a>') :  
             $('<a>').addClass('hover-wrap fancybox').attr('data-fancybox-group','gallery').attr('title',obj.nome).attr('href','javascript:index.descricao('+obj.idimovel+')');
             // linha abaixo comentada pois nao será aberto a galeria de imagens e sim a tela de descrição diretamente
@@ -74,16 +77,33 @@ index.carregarFotos=function(){
         a.append("<span class='overlay-img'></span><span class='overlay-img-thumb font-icon-plus'></span>");
         //obj.descricao = obj.descricao+"<br/><a href='javascript:index.descricao("+obj.idimovel+")'>[+]Mais Informações</a>";
         //var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).attr('alt',obj.descricao);        
-        var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).prop('codigo',obj.idimovel);
+        //var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).prop('codigo',obj.idimovel);
+        var img = foto===null? $('<img>') : $('<img>').attr('src',path+'pequenas/'+foto.arquivo).prop('codigo',obj.idimovel);
         img.click(function(){ var c = $(this).prop('codigo'); index.descricao(c); });
               
         var nome = "<br>"+obj.nome;
         var cidade = index.getContrato(obj)+" - "+obj.cidade;
-        li.append(cidade+nome).append(a).append(img);
-        foto===null? '' : $('#thumbs').append(li);
+        var h3 = "<h3>"+cidade+nome+"</h3>";
+        li.append(h3).append(a).append(img);
+        if(foto !==null){ 
+            i < 12 ? li.addClass('inicio') : '';                            // MOSTRAR ATÉ 12 ELEMENTOS
+            $('#thumbs').append(li); 
+        }
+        
     }    
     index.getCodigo();
     console.log('index.carregarFotos');
+    
+};
+
+index.shuffle = function shuffle(array) {
+    for (var i = array.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var temp = array[i];
+        array[i] = array[j];
+        array[j] = temp;
+    }
+    return array;
 };
 
 index.getContrato=function(obj){    
@@ -145,4 +165,17 @@ index.ajax=function(obj,funcao,view){ // FUNÇÃO AJAX
     }); // FIM DO AJAX   
     return retorno; // RETORNO DA FUNÇÃO
 };
- //index.start();
+
+index.removeScroll=function(jQuery){
+    var e = jQuery[0];
+    if ((e.clientHeight < e.scrollHeight) || (e.clientWidth < e.scrollWidth)) {
+        var fontSize = jQuery.css('font-size');
+        var toRemove = 'px';
+        var size = parseInt(fontSize.replace(toRemove, ''));
+        size = size - 1;
+        jQuery.css('font-size', size + 'px');
+        index.removeScroll(jQuery);
+    }            
+};
+
+ //index.start(); // INICIA NO ARQUIVO MAIN.JS

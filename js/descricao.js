@@ -46,7 +46,13 @@ desc.carregarFotos=function(json){
         obj.image = pathFoto; obj.link = pathFoto;
         a.push(obj);        
     }   
-    $("#pikame").PikaChoose({data: a, carousel:true,stopOnClick: true,hoverPause:true});
+    var b = function(self){
+      self.anchor.fancybox();
+   };
+    $("#pikame").PikaChoose({data: a, carousel:true,stopOnClick: true,hoverPause:true,buildFinished:b });
+    
+    
+   //$("#pikame").PikaChoose({buildFinished:a});
 };
 
 desc.preencherDados=function(json){

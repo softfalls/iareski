@@ -63,7 +63,7 @@ BRUSHED.slider = function(){
 		transition              :   1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
 		transition_speed	:   300,		// Speed of transition
 		new_window		:   1,			// Image links open in new window/tab
-		pause_hover             :   0,			// Pause slideshow on hover
+		pause_hover             :   1,			// Pause slideshow on hover
 		keyboard_nav            :   1,			// Keyboard navigation on/off
 		performance		:   1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
 		image_protect		:   1,			// Disables image dragging and right click with Javascript
@@ -79,12 +79,12 @@ BRUSHED.slider = function(){
 												   
 		// Components							
 		slide_links		:   'blank',            // Individual links for each slide (Options: false, 'num', 'name', 'blank')
-		thumb_links		:   0,			// Individual thumb links for each slide
-		thumbnail_navigation    :   0,			// Thumbnail navigation
+		thumb_links		:   1,			// Individual thumb links for each slide: default-0
+		thumbnail_navigation    :   1,			// Thumbnail navigation: default-0
                 slides 			:                       // Slideshow Images
                     [			
-                        {image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content">Iareski</div>', thumb : '', url : ''},
-                        {image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content">Iareski</div>', thumb : '', url : ''},
+                        {image : '_include/img/slider-images/image01.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
+                        {image : '_include/img/slider-images/image02.jpg', title : '<div class="slide-content"></div>', thumb : '', url : ''},
                         {image : '_include/img/slider-images/image03.jpg', title : '<div class="slide-content">Iareski</div>', thumb : '', url : ''},
                         {image : '_include/img/slider-images/image04.jpg', title : '<div class="slide-content">Iareski</div>', thumb : '', url : ''}  
                     ],
@@ -424,7 +424,7 @@ BRUSHED.toolTip = function(){
 	Init
 ================================================== */
 
-BRUSHED.slider();
+// BRUSHED.slider(); // home-slider aqui
 
 $(document).ready(function(){
 	Modernizr.load([
@@ -473,7 +473,13 @@ $(document).ready(function(){
 		splashFunction: function() {
 			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
 		}
-	});
+	},function(){
+            $('#filtro-inicio').click(); // INICIA COM 12 IMOVEIS NA PAGINA INICIAL
+            $('.item-thumbs h3').each(function(){
+                index.removeScroll($(this));
+            });
+        });
+        
         
 });
 

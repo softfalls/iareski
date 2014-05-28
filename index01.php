@@ -39,7 +39,7 @@
 <link href="_include/css/supersized.shutter.css" rel="stylesheet">
 
 <!-- FancyBox -->
-<link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet"><!---->
+<!--<link href="_include/css/fancybox/jquery.fancybox.css" rel="stylesheet">-->
 <link href="_include/css/pikachoose/bottom.css"rel="stylesheet">
 <!-- Font Icons -->
 <link href="_include/css/fonts.css" rel="stylesheet">
@@ -58,9 +58,8 @@
 <!-- jquery Style -->
 <link href="css/jquery-ui-1.9.1.custom.min.css" rel="stylesheet">
 
-<!-- Google Font 
+<!-- Google Font -->
 <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900' rel='stylesheet' type='text/css'>
--->
 
 <!-- Fav Icon -->
 <link rel="shortcut icon" href="#">
@@ -99,13 +98,6 @@
     }
     .fancybox-opened .fancybox-title { height: 220px; overflow: auto; }
     .fancybox-opened .fancybox-title p { text-align: justify; }
-    /*.camera_prev{ text-align: center; line-height: 2.5; }
-    .camera_prev:before { content: "<"; }
-    
-    .camera_next{ text-align: center; line-height: 2.5; }        
-    .camera_next:before { content: ">"; }
-    
-    .camera_next:before { content: ">"; }*/
     
     #logo{ left: 25px; position: relative; top: 10px; }
     #linkContato:hover{ color: red;}
@@ -113,24 +105,7 @@
     
     #descEspecificacao li { width: 385px; overflow: hidden;}
     #linkContato{color: whitesmoke;}
-    #likeBox{ background-color: #dde4e9;}
-    .item-thumbs{margin-left: 10px;}
-    .item-thumbs h3{
-        /*color: #FFFFFF;
-        font-family: ProximaNovaBold,Helvetica,Arial,sans-serif;
-        font-size: 14px;                
-        letter-spacing: 0;
-        line-height: 16px;        
-        overflow: auto;*/
-        padding: 15px 10px 3px;
-        height: 45px;
-        text-align: center;
-        text-transform: uppercase;
-        color: #7F8289;
-        font-size: 12px;
-        font-weight: bold;
-        margin: 0;
-    }
+    
 </style>
 </head>
 
@@ -191,27 +166,48 @@
             <div class="span12">                
                 <!-- Homepage Slider -->
                 <div id="home-slider" style="background: transparent; height: 400px;">	
-                        <div id="camera" class="camera_wrap camera_black_skin">
+                    
+                    <!--<div class="overlay">-->
+                        <div id="camera" class="camera_wrap camera_azure_skin">
                             <div data-src="_include/img/slider-images/image01.jpg">
                                 <div class="camera_caption fadeFromBottom">legenda. <em> teste</em></div>
                             </div>
                             <div data-src="_include/img/slider-images/image02.jpg"></div>
                             <div data-src="_include/img/slider-images/image03.jpg"></div>
                             <div data-src="_include/img/slider-images/image04.jpg"></div>
-                        </div>                    
-                </div>                
+                        </div>
+                    <!--</div>-->
+
+                    <div class="slider-text">
+                        <div id="slidecaption">
+                            <div class="slide-content"></div>
+                        </div>
+                    </div>   
+
+                    <div class="control-nav">
+                        <a id="prevslide" class="load-item"><i class="font-icon-arrow-simple-left"></i></a>
+                        <a id="nextslide" class="load-item"><i class="font-icon-arrow-simple-right"></i></a>
+                        <ul id="slide-list"></ul>
+
+                        <!--<a id="nextsection" href="#work"><i class="font-icon-arrow-simple-down"></i></a> botao vai para o home -->
+                    </div>
+                </div>
+                <!-- End Homepage Slider -->
+                <!--<div class="title-page">
+                    <h2 class="title">Imóveis</h2>
+                    <h3 class="title-description">Veja nossos Destaques <a href="#">Aqui</a>.</h3>
+                </div>-->
             </div>
         </div>
         <!-- End Title Page -->
         
         <!-- Portfolio Projects -->
         <div class="row">
-                <div class="span3" >
+        	<div class="span3">
             	<!-- Filter -->
                 <nav id="options" class="work-nav">
                     <ul id="filters" class="option-set" data-option-key="filter">
                     	<li class="type-work">Tipos de Imóveis</li>
-                        <li><a href="#filter" data-option-value=".inicio" id="filtro-inicio" class="hidden">Inicio</a></li>
                         <li><a href="#filter" data-option-value="*" class="selected">Todos</a></li>
                         <li>
                             <a href="#filter" data-option-value=".venda">Venda</a>
@@ -232,22 +228,10 @@
                             </ul>
                         </li>
                         <li><a href="#filter" data-option-value=".video">Video</a></li>                                                
+                    </ul>
+                    <ul>
                         <li><a href="#sofrildo">Sofrildo</a></li>    
-                    </ul>                    
-                    <div id="fb-root"></div>
-                    <script>(function(d, s, id) {
-                        var js, fjs = d.getElementsByTagName(s)[0];
-                        if (d.getElementById(id)) return;
-                        js = d.createElement(s); js.id = id;
-                        js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&appId=356295134507337&version=v2.0";
-                        fjs.parentNode.insertBefore(js, fjs);
-                      }(document, 'script', 'facebook-jssdk'));
-                    </script>
-                    <div id="likeBox" style="margin-left: 10px" class="fb-like-box" 
-                         data-href="https://www.facebook.com/pages/Iareski-Im%C3%B3veis/102306513206682" 
-                         data-width="200" data-height="390" data-colorscheme="light" 
-                         data-show-faces="true" data-header="true" data-stream="false" data-show-border="true"></div>
-                    
+                    </ul>
                 </nav>
                 <!-- End Filter -->
             </div>
@@ -502,7 +486,7 @@
 </div>
 
 
-<!-- Socialize
+<!-- Socialize -->
 <div id="social-area" class="page">
 	<div class="container">
     	<div class="row">
@@ -513,12 +497,12 @@
                         <li><a href="#" title="Follow Me on Dribbble" target="_blank"><span class="font-icon-social-dribbble"></span></a></li>
                         <li><a href="#" title="Follow Me on Forrst" target="_blank"><span class="font-icon-social-forrst"></span></a></li>
                         <li><a href="#" title="Follow Me on Behance" target="_blank"><span class="font-icon-social-behance"></span></a></li>-->
-                        <!--<li><a href="https://www.facebook.com/pages/Iareski-Im%C3%B3veis/102306513206682" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
+                        <li><a href="https://www.facebook.com/pages/Iareski-Im%C3%B3veis/102306513206682" title="Follow Me on Facebook" target="_blank"><span class="font-icon-social-facebook"></span></a></li>
                         <!--<li><a href="#" title="Follow Me on Google Plus" target="_blank"><span class="font-icon-social-google-plus"></span></a></li>
                         <li><a href="#" title="Follow Me on LinkedIn" target="_blank"><span class="font-icon-social-linkedin"></span></a></li>
                         <li><a href="#" title="Follow Me on ThemeForest" target="_blank"><span class="font-icon-social-envato"></span></a></li>
                         <li><a href="#" title="Follow Me on Zerply" target="_blank"><span class="font-icon-social-zerply"></span></a></li>-->
-                   <!--</ul>
+                    </ul>
                 </nav>
             </div>
         </div>
@@ -549,9 +533,9 @@
 <script src="_include/js/waypoints.js"></script> <!-- WayPoints -->
 <script src="_include/js/waypoints-sticky.js"></script> <!-- Waypoints for Header -->
 <script src="_include/js/jquery.isotope.js"></script> <!-- Isotope Filter -->
-<script src="_include/js/jquery.fancybox.pack.js"></script>  <!--Fancybox -->
-<!--<script src="_include/js/jquery.fancybox-media.js"></script>  Fancybox for Media -->
- <!--<script src="_include/js/jquery.fancybox-thumbs.js"></script>Fancybox for Media -->
+<!--<script src="_include/js/jquery.fancybox.pack.js"></script>  Fancybox -->
+<!--<script src="_include/js/jquery.fancybox-media.js"></script> <!-- Fancybox for Media -->
+<!--<script src="_include/js/jquery.fancybox-thumbs.js"></script> Fancybox for Media -->
 <script src="_include/js/jquery.jcarousel.min.js"></script>
 <script src="_include/js/jquery.pikachoose.min.js"></script>
 <!--<script src="_include/js/jquery.touchwipe.min.js"></script>-->

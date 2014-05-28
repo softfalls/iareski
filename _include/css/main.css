@@ -629,7 +629,7 @@ nav#menu #menu-nav li a:hover {
 
 .page {
 	background: #2F3238;
-	padding: 100px 0;
+	padding: 0;
 	position: relative;
 	z-index: 99;
 }
@@ -715,6 +715,7 @@ nav#menu #menu-nav li a:hover {
 
 .item-thumbs a + img {
 	width: 100%;	
+        max-height: 200px;
 }
 
 .item-thumbs .hover-wrap {
