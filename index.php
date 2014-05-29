@@ -115,13 +115,7 @@
     #linkContato{color: whitesmoke;}
     #likeBox{ background-color: #dde4e9;}
     .item-thumbs{margin-left: 10px;}
-    .item-thumbs h3{
-        /*color: #FFFFFF;
-        font-family: ProximaNovaBold,Helvetica,Arial,sans-serif;
-        font-size: 14px;                
-        letter-spacing: 0;
-        line-height: 16px;        
-        overflow: auto;*/
+    .item-thumbs h3{        
         padding: 15px 10px 3px;
         height: 45px;
         text-align: center;
@@ -190,7 +184,7 @@
         <div class="row">
             <div class="span12">                
                 <!-- Homepage Slider -->
-                <div id="home-slider" style="background: transparent; height: 400px;">	
+                <div id="home-slider" style="background: transparent; height: 400px; margin-top: 15px;">	
                         <div id="camera" class="camera_wrap camera_black_skin">
                             <div data-src="_include/img/slider-images/image01.jpg">
                                 <div class="camera_caption fadeFromBottom">legenda. <em> teste</em></div>
@@ -278,32 +272,40 @@
         </div>
         <!-- End Title Page -->
     
-        <div class="row">
-            <div class="span12">
-                <div class="pikachoose" style="float: left;">
-                    <ul id="pikame" class="jcarousel-skin-pika">
-                        <!--<li><a href="http://www.pikachoose.com"><img src="../../1.jpg"/></a><span>This is an example of the basic theme.</span></li>-->            
-                    </ul>
+        <div class="row" >
+            <div class="span12" style="font-weight: bold; line-height: 1.5; font-size: 13px;" >
+                <div class="row-fluid" >
+                    <div class="pikachoose span8" style="float: left;">
+                        <ul id="pikame" class="jcarousel-skin-pika span10" style="margin-left: -30px;">
+                            <!--<li><a href="http://www.pikachoose.com"><img src="../../1.jpg"/></a><span>This is an example of the basic theme.</span></li>-->            
+                        </ul>
+                    </div>
+                    <div id="descDescricao" class="span4" style="margin-left: 20px; text-align: justify; overflow: auto;"></div>
+                    <div class="span4" style="margin-left: 20px; text-align: justify; overflow: auto;">
+                        <!--<ul id="descEspecificacao" style=" float: right; height: 300px; margin: 10px -30px 0 0; overflow: hidden; 
+                            text-align: justify; width: 390px;">
+                        <ul id="descEspecificacao">-->
+                            <span id="descCodigo">Código </span> <br/>
+                            <span id="descVendaLoc">Imóvel para </span> <br/>
+                            <span id="descTipo">Tipo de imóvel </span> <br/>
+                            <span id="descAreaTerreno">Área do terreno </span> <br/>
+                            <span id="descAreaConst">Área construída </span> <br/>
+                            <span id="descQuarto">Qtd Quarto </span> <br/>
+                            <span id="descSuite">Qtd Suíte </span> <br/>
+                            <span id="descSala">Qtd Sala </span> <br/>
+                            <span id="descCozinha">Qtd Cozinha </span> <br/>
+                            <span id="descEstado">Estado </span> <br/>
+                            <span id="descCidade">Cidade </span> <br/>
+                            <span id="descBairro">Bairro </span> <br/>
+                            <span id="descEndereco">Endereço </span> <br/>
+                            <span id="descValor">Valor do imóvel </span>
+                        <!--</ul>--->
+                    </div>
+                    
                 </div>
-                <ul id="descEspecificacao" style="float: right;">
-                    <li id="descCodigo">Código </li>                        
-                    <li id="descVendaLoc">Imóvel para </li>                        
-                    <li id="descTipo">Tipo de imóvel </li>
-                    <li id="descAreaTerreno">Área do terreno </li>                        
-                    <li id="descAreaConst">Área construída </li>    
-                    <li id="descQuarto">Qtd Quarto </li>
-                    <li id="descSuite">Qtd Suíte </li>
-                    <li id="descSala">Qtd Sala </li>
-                    <li id="descCozinha">Qtd Cozinha </li>
-                    <li id="descEstado">Estado </li>                        
-                    <li id="descCidade">Cidade </li>    
-                    <li id="descBairro">Bairro </li>                        
-                    <li id="descEndereco">Endereço </li>                        
-                    <li id="descValor">Valor do imóvel </li>
-                </ul>  
-                <div id="map" style="float: right;"> </div>
-                <div id="descDescricao" style="width: 635px; float: left; text-align: justify; height: 130px; overflow: auto;"></div>
-                <a id="linkContato" href="#contact" onclick="javascript:desc.posicaoContato();" style="float: right; margin-right: 100px; margin-top: 50px">[+] Contato / Mensagem  </a>
+                <div class="row-fluid">
+                    <div id="map" class="span8" style="float: left;"> </div>                      
+                </div>                
             </div>
         </div>        
     </div>
