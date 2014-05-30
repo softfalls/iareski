@@ -60,9 +60,12 @@ desc.preencherDados=function(json){
     var obj = json.obj;
     obj.venda = obj.venda=='1' ? 'venda' : '';
     obj.locacao = obj.locacao=='1' ? 'locacao' : '';
+    var valorVenda = obj.valor_venda == 0 ? "" : ' ( R$ ' + convertFloatToMoeda(obj.valor_venda) + ' venda )'
+    var valorLocacao = obj.valor_aluguel == 0 ? "" : "( R$ " + convertFloatToMoeda(obj.valor_aluguel)+' aluguel )';
     $("#descricao").attr('title',obj.nome);
     $("#descCodigo").text("Código: "+obj.idimovel);
-    $("#descVendaLoc").text("Imóvel para: "+obj.venda+' '+obj.locacao);
+    $("#contact_codigo").val("Código de referencia: "+obj.idimovel);
+    $("#descVendaLoc").text("Imóvel para: "+obj.venda+' '+obj.locacao).css('');
     $("#descTipo").text("Tipo de imóvel: "+desc.getTipoImovel(obj.idtipo));
     $("#descQuarto").text("Qtd Quarto: "+obj.qtd_quarto);
     $("#descSuite").text("Qtd Suíte: "+obj.qtd_suite);
@@ -74,7 +77,8 @@ desc.preencherDados=function(json){
     $("#descEstado").text("Estado: "+obj.uf);
     $("#descAreaTerreno").text("Área do terreno: "+obj.terreno_largura+'X'+obj.terreno_comprimento);
     $("#descAreaConst").text("Área construída: "+obj.area_construida);
-    $("#descValor").text("Valor do imóvel: ("+obj.valor_aluguel+' aluguel) ('+obj.valor_venda+' venda)');
+    $("#descValor").append(
+            "Valor do imóvel: <br/>" + valorLocacao+"<br/>"+valorVenda);
     $("#descDescricao").text(obj.descricao);
     
     var mapaLink = obj.logradouro+" "+obj.numero+", "+obj.cidade;    

@@ -17,8 +17,8 @@ class Contact_Form{
 		
 		$this->name = stripslashes($details['name']);
 		$this->email = trim($details['email']);
-		$this->subject = 'Contact from Your Website'; // Subject 
-		$this->message = stripslashes($details['message']);
+		$this->subject = 'Email do site Iareski'; // Subject 
+		$this->message = stripslashes(@$details['contact_codigo']). " ". stripslashes($details['message']);
 	
 		$this->email_admin = $email_admin;
 		$this->message_min_length = $message_min_length;
@@ -45,28 +45,28 @@ class Contact_Form{
 		// Check name
 		if(!$this->name)
 		{
-			$this->response_html .= '<p>Please enter your name</p>';
+			$this->response_html .= '<p>Por favor preencha seu nome</p>';
 			$this->response_status = 0;
 		}
 
 		// Check email
 		if(!$this->email)
 		{
-			$this->response_html .= '<p>Please enter an e-mail address</p>';
+			$this->response_html .= '<p>Por favor preencha seu e-mail</p>';
 			$this->response_status = 0;
 		}
 		
 		// Check valid email
 		if($this->email && !$this->validateEmail())
 		{
-			$this->response_html .= '<p>Please enter a valid e-mail address</p>';
+			$this->response_html .= '<p>Favor digitar um e-mail valido</p>';
 			$this->response_status = 0;
 		}
 		
 		// Check message length
 		if(!$this->message || strlen($this->message) < $this->message_min_length)
 		{
-			$this->response_html .= '<p>Please enter your message. It should have at least '.$this->message_min_length.' characters</p>';
+			$this->response_html .= '<p>Sua mensagem deve conter no minimo '.$this->message_min_length.' characteres</p>';
 			$this->response_status = 0;
 		}
 	}
@@ -81,7 +81,7 @@ class Contact_Form{
 		if($mail)
 		{
 			$this->response_status = 1;
-			$this->response_html = '<p>Thank You!</p>';
+			$this->response_html = '<p>Obrigado!</p>';
 		}
 	}
 

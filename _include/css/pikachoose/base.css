@@ -1,7 +1,8 @@
 /* Just for the example. Fee free to delete these three lines */
 body{font-family:Helvetica, sans-serif;}
 a{color:white;}
-.pikachoose {width: 600px;}
+
+/*.pikachoose {width: 600px;}*/
 
 /* Style the thumbnails */
 .pika-thumbs{ padding: 0 16px; height: 75px; }
@@ -10,7 +11,7 @@ a{color:white;}
 	.pika-thumbs li .clip {position:relative;height:100%;text-align: center; vertical-align: middle; overflow: hidden;}
 	
 /* The stage is the wrapper. The image fills 100% the height of the stage */
-.pika-stage, .pika-textnav {width: 640px;}
+/*.pika-stage, .pika-textnav {width: 640px;}*/
 .pika-stage {position: relative; background: #fafafa; border: 1px solid #e5e5e5; padding: 10px 10px 40px 10px; text-align:center; height:360px;}
 .pika-stage img{max-height:100%; max-width: 100%; }
 .pika-stage .caption {position: absolute; background: #000; background: rgba(0,0,0,0.75);  border: 1px solid #141414; font-size: 11px; 

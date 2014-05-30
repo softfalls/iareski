@@ -107,7 +107,6 @@
     
     .camera_next:before { content: ">"; }*/
     
-    #logo{ left: 25px; position: relative; top: 10px; }
     #linkContato:hover{ color: red;}
     /*#descricao{display: none; height: 100%; margin: auto; width: 1100px;}*/
     
@@ -141,13 +140,17 @@
 </div>
 <!-- End of Splash Screen -->
 
-<div id="cab" style="height: 18%; background: white; min-height: 240px; margin: auto; text-align: center;"> <!--#7F8289-->    
-    <object type="application/x-shockwave-flash" width="760" height="180" data="swf/BANNERTOPOCRECI.swf" style="z-index: -1"></object>
-    <div style="color: #483D8B; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #C0C0C0; margin-top: 15px;"> 
+<div id="cab" style=" background: white; margin: auto; text-align: center; padding-bottom: 10px;">
+    <div class="row text-center">
+        <object type="application/x-shockwave-flash" width="760" height="180" data="swf/BANNERTOPOCRECI.swf" style="z-index: -1"></object>
+        <img class="span10" style="float: none; margin: auto; width: 90%" 
+             id="logo" title="iareski" src="imagens/logooficialempresa.png" alt="iareski_logo">
+    </div>    
+    <div class="row">
+        <div style="color: #483D8B; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #C0C0C0; margin: 15px;"> 
             <p> IARESKI IMÓVEIS (45) 3574-7043 </p>
-    </div>
-    <!--<img id="logo" title="iareski" src="imagens/logooficialempresa.png" alt="iareski_logo">    -->
-    
+        </div>
+    </div>            
 </div>
 
 
@@ -260,7 +263,7 @@
 <!-- End Our Work Section -->
 
 <!-- descricao Section -->
-<div id="descricao" class="page-alternate" title="" >    
+<div id="descricao" class="page" title="" >    
     <div class="container">
         <!-- Title Page -->
         <div class="row">
@@ -275,8 +278,8 @@
         <div class="row" >
             <div class="span12" style="font-weight: bold; line-height: 1.5; font-size: 13px;" >
                 <div class="row-fluid" >
-                    <div class="pikachoose span8" style="float: left;">
-                        <ul id="pikame" class="jcarousel-skin-pika span10" style="margin-left: -30px;">
+                    <div class="pikachoose span8" >
+                        <ul id="pikame" class="jcarousel-skin-pika span12" >
                             <!--<li><a href="http://www.pikachoose.com"><img src="../../1.jpg"/></a><span>This is an example of the basic theme.</span></li>-->            
                         </ul>
                     </div>
@@ -304,7 +307,19 @@
                     
                 </div>
                 <div class="row-fluid">
-                    <div id="map" class="span8" style="float: left;"> </div>                      
+                    <div id="map" class="span8" style="float: left;"> </div>  
+                    <div class="span4"> 
+                        <h3 class="title">Entre em Contato</h3>
+                        <form id="contact-form" class="contact-form" action="#">
+                            <p class="contact-name"> <input id="contact_codigo" type="text" value="" readonly="readonly" name="contact_codigo" /> </p>
+                            <p class="contact-name"> <input id="contact_name"  class="campo" type="text" placeholder="Nome Completo" value="" name="name" /> </p>
+                            <p class="contact-email"> <input id="contact_email" class="campo" type="text" placeholder="endereço de Email" value="" name="email" /> </p>
+                            <p class="contact-message"> <textarea id="contact_message" class="campo" placeholder="Sua Mensagem" name="message" rows="7" cols="40"></textarea> </p>
+                            <p class="contact-submit"> <a id="contact-submit" class="submit" href="#">Enviar Email</a> </p>
+
+                            <div id="response"></div>
+                        </form>         
+                    </div>                   
                 </div>                
             </div>
         </div>        
@@ -326,8 +341,8 @@
         <!-- End Title Page -->
         
         <div class="row">    	
-            <div class="span4 profile">
-                <object type="application/x-shockwave-flash" width="900" height="650" data="sofrildo.swf">
+            <div class="span12">
+                <object type="application/x-shockwave-flash" class="span12" height="640" data="sofrildo.swf">
                     <param name="movie" value="arquivo.swf" />                
                 </object>
             </div>
@@ -355,27 +370,22 @@
     
     <!-- Contact Form -->
     <div class="row">
-    	<div class="span9">
-        
-        	<form id="contact-form" class="contact-form" action="#">
+    	<div class="span9">        
+            <form id="contact-form" class="contact-form" action="#">
             	<p class="contact-name">
-            		<input id="contact_name" type="text" placeholder="Nome Completo" value="" name="name" />
+                    <input id="contact_name" class="campo" type="text" placeholder="Nome Completo" value="" name="name" />
                 </p>
                 <p class="contact-email">
-                	<input id="contact_email" type="text" placeholder="endereço de Email" value="" name="email" />
+                    <input id="contact_email" class="campo" type="text" placeholder="endereço de Email" value="" name="email" />
                 </p>
                 <p class="contact-message">
-                	<textarea id="contact_message" placeholder="Sua Mensagem" name="message" rows="15" cols="40"></textarea>
+                    <textarea id="contact_message" class="campo" placeholder="Sua Mensagem" name="message" rows="15" cols="40"></textarea>
                 </p>
                 <p class="contact-submit">
-                	<a id="contact-submit" class="submit" href="#">Enviar Email</a>
-                </p>
-                
-                <div id="response">
-                
-                </div>
-            </form>
-         
+                    <a id="contact-submit" class="submit" href="#">Enviar Email</a>
+                </p>                
+                <div id="response"></div>
+            </form>         
         </div>
         
         <div class="span3">
@@ -476,21 +486,21 @@
 <!-- End Twitter Feed -->
 
 <!-- Bancos financiamento Section -->
-<div id="bancos" class="page" style="height: 30px">
+<div id="bancos" class="page" >
     <div class="container">
         <!-- Title Page -->
         <div class="row">
             <div class="span12">
-                <div class="title-page">
-                    <h2 class="title" style="margin-top: -80px;" >Simulações de Financiamento</h2>                    
+                <div class="title-page" style="margin-bottom: 0;">
+                    <h2 class="title" >Simulações de Financiamento</h2>                    
                 </div>
             </div>
         </div>
         <!-- End Title Page -->
 
-        <div class="row">    	
-            <div class="span4 profile">
-                <img border="0" style="position:absolute;top: 20%;left: 27%;"usemap="#Map10" src="http://www.iareskiimoveis.com.br/templates/novo/imagens/simuladores.png">
+        <div class="row" style="text-align: center;">    	
+            <div class="span12">
+                <img class="span12" border="0" usemap="#Map10" src="http://www.iareskiimoveis.com.br/templates/novo/imagens/simuladores.png">
                 <map id="Map10" name="Map10">
                     <area target="_blank" href="http://www.santander.com.br/portal/wps/script/templates/GCMRequest.do?page=5516" coords="16,70,117,138" shape="rect">
                     <area target="_blank" href="https://www42.bb.com.br/portalbb/creditoImobiliario/Proposta,2,2250,2250.bbx" coords="132,69,234,136" shape="rect">
@@ -530,7 +540,7 @@
 
 <!-- Footer -->
 <footer>
-	<p class="credits">&copy;2013 <a href="#" title="IARESKI IMÓVEIS">Iareski Imóveis </a> by <a href="#" title="Maison K. Sakamoto | Web Designer &amp; Front-end Developer">Maison K. Sakamoto - maison.sakamoto@gmail.com</a></p>
+	<p class="credits">&copy;2013 <span href="#" title="IARESKI IMÓVEIS">Iareski Imóveis </span> by <span href="#" title="Maison K. Sakamoto | Web Designer &amp; Front-end Developer">Maison K. Sakamoto - maison.sakamoto@gmail.com</span></p>
 </footer>
 <!-- End Footer -->
 
@@ -562,9 +572,10 @@
 
 <script src="js/jquery-ui-1.9.1.custom.min.js"></script> <!-- Index JS -->
 <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-<script src="js/descricao.js?31"></script><!--  Index JS -->
-<script src="js/index.js?5"></script><!-- Index JS -->
-<script src="_include/js/main.js?nocache=129"></script> <!-- Default JS -->
+<script src="js/descricao.js"></script><!--  Index JS -->
+<script src="js/index.js"></script><!-- Index JS -->
+<script src="js/custom_jquery.js"></script><!-- Index JS -->
+<script src="_include/js/main.js"></script> <!-- Default JS -->
 
 <!-- End Js -->
 

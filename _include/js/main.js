@@ -7,6 +7,7 @@ jQuery(function($){
 ================================================== */
 var mobileMenuClone = $('#menu').clone().attr('id', 'navigation-mobile');
 
+/* AJUSTA O SITE CONFORME O TAMANHO DA JANELA*/
 BRUSHED.mobileNav = function(){
 	var windowWidth = $(window).width();
 	
@@ -15,9 +16,13 @@ BRUSHED.mobileNav = function(){
 			mobileMenuClone.insertAfter('#menu');
 			$('#navigation-mobile #menu-nav').attr('id', 'menu-nav-mobile');
 		}
-                $('#cab').css('margin-left', '-20px').css('margin-right','-20px');
+                $('#cab object').hide();
+                $('#cab img').show();
+                $('#sofrildo').hide();
+                
 	} else {
-                $('#cab').css('margin-left', '0px').css('margin-right','0px');
+                $('#cab object').show();
+                $('#cab img').hide();
 		$('#navigation-mobile').css('display', 'none');
 		if ($('#mobile-nav').hasClass('open')) {
 			$('#mobile-nav').removeClass('open');	
@@ -219,7 +224,7 @@ BRUSHED.contactForm = function(){
 			success: function(response) {
 				
 				if(response.status){
-					$('#contact-form input').val('');
+					$('#contact-form .campo').val('');
 					$('#contact-form textarea').val('');
 				}
 				
@@ -228,6 +233,7 @@ BRUSHED.contactForm = function(){
 		});
 		return false;
 	});
+        
         console.log('BRUSHED.contactForm');
 };
 
