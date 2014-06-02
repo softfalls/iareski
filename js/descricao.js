@@ -77,7 +77,7 @@ desc.preencherDados=function(json){
     $("#descEstado").text("Estado: "+obj.uf);
     $("#descAreaTerreno").text("Área do terreno: "+obj.terreno_largura+'X'+obj.terreno_comprimento);
     $("#descAreaConst").text("Área construída: "+obj.area_construida);
-    $("#descValor").append(
+    $("#descValor").empty().append(
             "Valor do imóvel: <br/>" + valorLocacao+"<br/>"+valorVenda);
     $("#descDescricao").text(obj.descricao);
     
