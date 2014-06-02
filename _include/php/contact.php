@@ -81,7 +81,7 @@ class Contact_Form{
 		if($mail)
 		{
 			$this->response_status = 1;
-			$this->response_html = '<p>Obrigado!</p>';
+			$this->response_html = '<p>Enviada com sucesso, Obrigado!</p>';
 		}
 	}
 
