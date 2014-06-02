@@ -78,7 +78,7 @@ index.carregarFotos=function(){
         //obj.descricao = obj.descricao+"<br/><a href='javascript:index.descricao("+obj.idimovel+")'>[+]Mais Informações</a>";
         //var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).attr('alt',obj.descricao);        
         //var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).prop('codigo',obj.idimovel);
-        var img = foto===null? $('<img>') : $('<img>').attr('src',path+'pequenas/'+foto.arquivo).prop('codigo',obj.idimovel);
+        var img = foto===null? $('<img>') : $('<img>').attr('src',path+'grandes/'+foto.arquivo).prop('codigo',obj.idimovel);
         img.click(function(){ var c = $(this).prop('codigo'); index.descricao(c); });
               
         var nome = "<br>"+obj.nome;
