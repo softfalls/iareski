@@ -32,7 +32,7 @@
 <link href="_include/css/bootstrap.min.css" rel="stylesheet">
 
 <!-- Main Style -->
-<link href="_include/css/main.css" rel="stylesheet">
+<link href="_include/css/main.css?02062014" rel="stylesheet">
 
 <!-- Supersized -->
 <link href="_include/css/supersized.css" rel="stylesheet">
@@ -572,10 +572,10 @@
 
 <script src="js/jquery-ui-1.9.1.custom.min.js"></script> <!-- Index JS -->
 <script src='http://maps.google.com/maps/api/js?sensor=false' type='text/javascript'></script>
-<script src="js/descricao.js"></script><!--  Index JS -->
-<script src="js/index.js"></script><!-- Index JS -->
+<script src="js/descricao.js?02062014"></script><!--  Index JS -->
+<script src="js/index.js?02062014"></script><!-- Index JS -->
 <script src="js/custom_jquery.js"></script><!-- Index JS -->
-<script src="_include/js/main.js"></script> <!-- Default JS -->
+<script src="_include/js/main.js?02062014"></script> <!-- Default JS -->
 
 <!-- End Js -->
 
