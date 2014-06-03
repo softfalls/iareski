@@ -4,27 +4,30 @@
 */
 
 
-header('Cache-Control: no-cache, must-revalidate');
+/*header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
-
+*/
 $admin_email = 'maison.sakamoto@gmail.com'; // Your Email
 $message_min_length = 5; // Min Message Length
 
+include_once ("Class.PhpMailer.php");
 
 class Contact_Form{
 	function __construct($details, $email_admin, $message_min_length){
-		
+		$cod = stripslashes(@$details['contact_codigo']);
+                $mes = stripslashes($details['message']);
 		$this->name = stripslashes($details['name']);
 		$this->email = trim($details['email']);
 		$this->subject = 'Email do site Iareski'; // Subject 
-		$this->message = stripslashes(@$details['contact_codigo']). " ". stripslashes($details['message']);
+		$this->message = $cod . ' ' . $mes;
 	
 		$this->email_admin = $email_admin;
 		$this->message_min_length = $message_min_length;
 		
 		$this->response_status = 1;
 		$this->response_html = '';
+                $this->retorno = '';
 	}
 
 
@@ -72,16 +75,52 @@ class Contact_Form{
 	}
 
 
-	private function sendEmail(){
+        private function enviarEmail(){
+            $mail = new PHPMailer();
+            $mail->IsSMTP(); // Define que a mensagem será SMTP
+            $mail->Mailer = "smtp";
+            $mail->Host = "ssl://smtp.googlemail.com";
+            $mail->Port = 465;        
+            //$mail->Host = "smtp.gmail.com";
+            //$mail->Port = 465;
+            //$mail->Port = 25;
+            $mail->SMTPAuth = true; // turn on SMTP authentication
+            $mail->Username = "maison.sakamoto@gmail.com"; // SMTP username - Seu e-mail
+            $mail->Password = "!rainha!123"; // SMTP password        
+            $mail->From = $this->email; // Seu e-mail
+            $mail->FromName = $this->name; // Seu nome
+            
+            $mail->AddAddress('maison.sakamoto@gmail.com','maison.sakamoto@gmail.com'); // DESTINATARIO
+            //$mail->AddBCC('maison.sakamoto@gmail.com','Maison Sakamoto'); // Cópia Oculta
+            $mail->IsHTML(true); // Define que o e-mail será enviado como HTML
+            $mail->Subject = $this->subject; // Assunto da mensagem
+            $mail->Body = $this->message;
+            
+            // Envia o e-mail
+            $enviado = $mail->Send();
+
+            // Limpa os destinatários e os anexos
+            $mail->ClearAllRecipients();
+            $mail->ClearAttachments();
+
+            // Exibe uma mensagem de resultado
+            if ($enviado) {
+                $this->response_status = 1;
+                $this->response_html = '<p>Enviada com sucesso, Obrigado!</p>';                
+            }
+    }
+
+
+        private function sendEmail(){                
 		$mail = mail($this->email_admin, $this->subject, $this->message,
-			 "From: ".$this->name." <".$this->email.">\r\n"
+                        "From: ".$this->name." <".$this->email.">\r\n"
 			."Reply-To: ".$this->email."\r\n"
 		."X-Mailer: PHP/" . phpversion());
 	
 		if($mail)
 		{
 			$this->response_status = 1;
-			$this->response_html = '<p>Enviada com sucesso, Obrigado!</p>';
+			$this->response_html = '<p>Enviada com sucesso, Obrigado!</p>';                        
 		}
 	}
 
@@ -90,13 +129,13 @@ class Contact_Form{
 		$this->validateFields();
 		if($this->response_status)
 		{
-			$this->sendEmail();
+			//$this->sendEmail();
+                        $this->enviarEmail();
 		}
 
 		$response = array();
 		$response['status'] = $this->response_status;	
-		$response['html'] = $this->response_html;
-		
+		$response['html'] = $this->response_html;		
 		echo json_encode($response);
 	}
 }

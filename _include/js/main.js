@@ -112,6 +112,11 @@ BRUSHED.nav = function(){
 };
 
 
+BRUSHED.callBackFilter = function(){
+    console.log('globalInit = ' + index.globalInit ); 
+    index.globalInit == 0 ?  $("#menu-descricao").click() : '' ;
+};
+
 /* ==================================================
    Filter Works
 ================================================== */
@@ -122,17 +127,19 @@ BRUSHED.filter = function (){
 		
 		$container.imagesLoaded(function() {
 			$container.isotope({
+                          filter: '.inicio',
 			  // options
 			  animationEngine: 'best-available',
 			  itemSelector : '.item-thumbs',
-			  layoutMode : 'fitRows'
+			  layoutMode : 'fitRows'/*,
+                          complete: BRUSHED.callBackFilter()*/
 			});
 		});
 	
 		
 		// filter items when filter link is clicked
-		var $optionSets = $('#options .option-set'),
-			$optionLinks = $optionSets.find('a');
+		var $optionSets = $('#options .option-set');
+                var $optionLinks = $optionSets.find('a');
 	
 		  $optionLinks.click(function(){
 			var $this = $(this);
@@ -152,13 +159,17 @@ BRUSHED.filter = function (){
 			value = value === 'false' ? false : value;
 			options[ key ] = value;
 			if ( key === 'layoutMode' && typeof changeLayoutMode === 'function' ) {
-			  // changes in layout modes need extra logic
+			  // changes in layout modes need extra logic                          
 			  changeLayoutMode( $this, options )
-			} else {
+			} else {                            
 			  // otherwise, apply new options
 			  $container.isotope( options );
 			}
 			
+                        /*if($(this).attr('id')=='filtro-inicio'){ 
+                            index.globalInit = 1;                                                        
+                        }*/
+                        
 			return false;
 		});
 	}
@@ -292,7 +303,8 @@ BRUSHED.menu = function(){
 ================================================== */
 
 BRUSHED.goSection = function(){
-	$('#nextsection').on('click', function(){
+	//$('#nextsection').on('click', function(){
+        $('#menu-descricao').on('click', function(){
 		$target = $($(this).attr('href')).offset().top-30;
 		
 		$('body, html').animate({scrollTop : $target}, 750, 'easeOutExpo');
@@ -470,7 +482,7 @@ $(document).ready(function(){
 	BRUSHED.toggle();
 	BRUSHED.toolTip();
         index.start();
-        
+          
         $('body').jpreLoader({ //Segura no "carregando" enquando carrega as imagens do site
 		splashID: "#jSplash",
 		showSplash: true,
@@ -480,10 +492,10 @@ $(document).ready(function(){
 			$('#circle').delay(250).animate({'opacity' : 1}, 500, 'linear');
 		}
 	},function(){
-            $('#filtro-inicio').click(); // INICIA COM 12 IMOVEIS NA PAGINA INICIAL
-            $('.item-thumbs h3').each(function(){
-                index.removeScroll($(this));
-            });
+            console.log('filtro click apos preloader');
+            $("#menu-descricao").click();
+            //$('#filtro-inicio').click(); // INICIA COM 12 IMOVEIS NA PAGINA INICIAL                        
+            //setTimeout(function(){ $("#menu-descricao").click(); },600);            
         });
         
         

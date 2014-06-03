@@ -34,7 +34,8 @@ $.fn.googleMap = function(address, options) {
                         position: results[0].geometry.location,
                         map: map                        
                     });
-                    google.maps.event.addDomListener(window, 'load', desc.show());                    
+                    //google.maps.event.addDomListener(window, 'load', desc.show());
+                    google.maps.event.addDomListener(window, 'load', null);
                     
                 }
             }
@@ -43,15 +44,15 @@ $.fn.googleMap = function(address, options) {
 
 
 var index={};
-
+index.globalInit = 0;
 index.start=function(){        
     console.log('index.start');
     $(document).bind("contextmenu",function(e){ alert("Direitos reservados"); return false; });
     //$('#home-slider').css('height','70%'); // ALTERE AQUI E NA DIV COM ID='CAB'
     var id = $.getUrlVar('descricao');
-    id != "" ?  desc.start(id): $("#descricao").hide();
-    
+    id != "" ?  desc.start(id): $("#descricao").hide();    
     jQuery(function(){ jQuery('#camera').camera({fx: 'scrollLeft', time: 2000, pagination: true }); });    
+    $('.item-thumbs h3').each(function(){ index.removeScroll($(this)); });          
 };
 
 index.getCodigo=function(){
