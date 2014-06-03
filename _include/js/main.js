@@ -216,17 +216,47 @@ BRUSHED.fancyBox = function(){
         console.log('BRUSHED.fancybox');
 };
 
+$.fn.exists = function () { return this.length !== 0; }  //FUNCAO RETORNA TRUE SE EXISTE
 
 /* ==================================================
    Contact Form
 ================================================== */
-
 BRUSHED.contactForm = function(){
-	$("#contact-submit").on('click',function() {
-		$contact_form = $('#contact-form');
-		
-		var fields = $contact_form.serialize();
-		
+	$(".submit").click(function() {
+            var nome = 'NOME CLIENTE: ' + $(this).parents('form').find('#contact_name').val() + '<br/>';
+            var email_cliente = 'EMAIL CLIENTE: ' + $(this).parents('form').find('#contact_email').val() + '<br/>';
+            var mensagem = 'MENSAGEM CLIENTE: ' +$(this).parents('form').find('#contact_message').val() + '<br/>';
+            var $codigo_ref = $(this).parents('form').find('#contact_codigo');
+            var codigo_ref = $codigo_ref.exists() === true ? $codigo_ref.val() +'<br/>' : '';
+            var $response = $(this).parents('form').find('#response');
+            
+            
+            
+            $response.empty().html('<p>Enviando informacoes aguarde...</p>');
+            $.ajax({
+            type: "POST",
+            url: "https://mandrillapp.com/api/1.0/messages/send.json",
+            data: {
+              'key': 'GOoB031qdGCLNJBgrXb3kw',
+              'message': {
+                'from_email': 'maison.sakamoto@gmail.com',
+                'to': [                    
+                    { 'email': 'iareski@hotmail.com','name': 'IARESKI','type': 'to' }/*,
+                    { 'email': 'maison.sakamoto@gmail.com', 'name': 'MAISON','type': 'to' }*/
+                  ],
+                'autotext': 'true',
+                'subject': 'EMAIL AUTOMATICO DO SITE', // ASSUNTO
+                'html': nome+email_cliente+codigo_ref+mensagem //MENSAGEM
+              }
+            }
+           }).done(function(response) {
+                console.log(response); // if you're into that sorta thing
+                $response.empty().html('<p>Enviado com sucesso, Obrigado!</p>');
+                $('#contact-form .campo').val('');
+                $('#contact-form textarea').val('');
+           });
+            /*$contact_form = $('#contact-form');		
+		var fields = $contact_form.serialize();		
 		$.ajax({
 			type: "POST",
 			url: "_include/php/contact.php",
@@ -241,7 +271,7 @@ BRUSHED.contactForm = function(){
 				
 				$('#response').empty().html(response.html);
 			}
-		});
+		});*/
 		return false;
 	});
         
