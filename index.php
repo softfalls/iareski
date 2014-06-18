@@ -142,15 +142,15 @@
 
 <div id="cab" style=" background: white; margin: auto; text-align: center; padding-bottom: 10px;">
     <div class="row text-center">
-        <object type="application/x-shockwave-flash" width="760" height="180" data="swf/BANNERTOPOCRECI.swf" style="z-index: -1"></object>
-        <img class="span10" style="float: none; margin: auto; width: 90%" 
-             id="logo" title="iareski" src="imagens/logooficialempresa.png" alt="iareski_logo">
+        <!--<object type="application/x-shockwave-flash" width="760" height="180" data="swf/BANNERTOPOCRECI.swf" style="z-index: -1"></object>-->
+        <img class="span10" style="float: none; margin: auto;" 
+             id="logo" title="iareski" src="imagens/TOPOIARESKISITE-01.jpg" alt="iareski_logo">
     </div>    
-    <div class="row">
+    <!--<div class="row">
         <div style="color: #483D8B; font: 900 20px 'Roboto',sans-serif; text-shadow: 0 2px 0 #C0C0C0; margin: 15px;"> 
             <p> IARESKI IMÓVEIS (45) 3574-7043 </p>
         </div>
-    </div>            
+    </div>            -->
 </div>
 
 

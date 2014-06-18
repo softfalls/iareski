@@ -16,13 +16,14 @@ BRUSHED.mobileNav = function(){
 			mobileMenuClone.insertAfter('#menu');
 			$('#navigation-mobile #menu-nav').attr('id', 'menu-nav-mobile');
 		}
-                $('#cab object').hide();
-                $('#cab img').show();
+                /*$('#cab object').hide();
+                $('#cab img').show();*/
                 $('#sofrildo').hide();
                 
 	} else {
-                $('#cab object').show();
-                $('#cab img').hide();
+                /*$('#cab object').show();
+                $('#cab img').hide();*/
+                $('#sofrildo').show();
 		$('#navigation-mobile').css('display', 'none');
 		if ($('#mobile-nav').hasClass('open')) {
 			$('#mobile-nav').removeClass('open');	
